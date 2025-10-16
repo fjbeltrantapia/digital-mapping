@@ -28,7 +28,7 @@ soho <- tm_shape(deaths) +
           size.legend = tm_legend(
             title = "Deaths (residents)",
             frame = FALSE,
-            orientation = "portrait")) +
+            orientation = "landscape")) +
   tm_shape(pump_bs) + 
   tm_symbols(fill = "darkblue", size = 0.8, 
              shape = 18, fill_alpha = 0.6) +
@@ -43,3 +43,41 @@ soho <- tm_shape(deaths) +
 tmap_save(soho, "images/soho.tiff",
   width    = 7,
   height   = 5)
+
+soho <- tm_shape(deaths) + 
+  tm_symbols(col = "grey80", fill = "grey80",
+             col_alpha = 0, fill_alpha = 0.5,
+             size = 0.3) +
+  # tm_tiles("OpenStreetMap") +
+  tm_shape(deaths) + 
+  tm_dots(fill = "red", col = "red",
+          size = "deaths_r",
+          col_alpha = 0.5, fill_alpha = 0.5,
+          size.scale = tm_scale_intervals(
+            breaks = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12),
+            labels = c(
+              "0", "1", "2", "3", "4", 
+              "5", "6", "7", "8", "9", 
+              "10", "11+"
+            )),
+          size.legend = tm_legend(
+            title = "Deaths",
+            frame = FALSE,
+            orientation = "portrait")) +
+  tm_shape(pump_bs) + 
+  tm_symbols(fill = "darkblue", size = 0.8, 
+             shape = 18, fill_alpha = 0.6) +
+  tm_shape(pumps) + 
+  tm_symbols(fill = "blue", size = 0.5, 
+             shape = 18, fill_alpha = 0.6) +  
+  tm_add_legend(fill = "darkblue", size = 0.8, 
+                shape = 18, fill_alpha = 0.6, labels = "Broad Street Pump") +
+  tm_add_legend(fill = "blue", size = 0.5, 
+                shape = 18, fill_alpha = 0.6, labels = "Other pumps") +
+  tm_layout(legend.position = c(0.01, 0.65),
+            legend.bg.color = "white",
+            legend.bg.alpha = 0 )
+
+tmap_save(soho, "images/soho.tiff",
+          width    = 7,
+          height   = 5)
