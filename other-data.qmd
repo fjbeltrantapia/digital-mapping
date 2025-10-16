@@ -1,0 +1,126 @@
+---
+title: "Sources of spatial data"
+---
+
+Below you can find a curated set of varied datasets that you can use for the class assignments and your own research projects. Please make sure to read the underlying documentation describing the information. The list is obviously highly selected based on my own interests and availability, so you are also free to choose your own sources.
+
+Different R packages also make it easy to import spatial objects. For instance, the packages `geodata`, `spData`, `rnaturalearth` or `maps` facilitate access to climate, crops, elevation, land use, soil, administrative boundaries and other data (@moraga2023 surveys some of these packages [here](https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html)). National agencies will also have shapefiles with all settlements and many other spatial features. [GeoNorge](https://www.geonorge.no), for instance, provides thousands of shapefiles and raster files for Norway.
+
+## Shapefiles
+
+- [GADM](https://www.gadm.org) provides boundaries at different administrative levels for all countries.
+
+- [Natural Earth](https://www.naturalearthdata.com/features/). 
+
+## Raster data: 
+
+- [WorldClim](https://worldclim.org): historical climate data (1970-2000).
+
+- [FAO-GAEZ](https://gaez.fao.org): suitable agricultural land and crop suitability indexes.
+
+- [SRTM Digital Elevation Database](https://srtm.csi.cgiar.org) 
+
+- [European Soil Database](https://esdac.jrc.ec.europa.eu/content/european-soil-database-v2-raster-library-1kmx1km)
+
+- [NASA Earth Data](https://www.earthdata.nasa.gov/learn/backgrounders/nighttime-lights): night-light luminosity. 
+
+These examples provide global or international datasets. National agencies may have their own datasets. 
+
+The packages [`geodata`](https://cran.r-project.org/web/packages/geodata/geodata.pdf) or [`rnaturalearth`](https://cran.r-project.org/web/packages/rnaturalearth/vignettes/rnaturalearth.html) also facilitate importing this kind of information into R.
+
+## Textual corpuses
+
+As discussed during the course, there are computational tools that allow extracting locations from textual corpuses (entity recognition) and then assign them geographic coordinates (geo-coding). The package [`tidygeocoder`](https://jessecambon.github.io/tidygeocoder/) "makes getting data from geocoding services easy" [@cambon2021]. As illustrations, this kind of tools have been employed in the following projects: 
+
+- The [Trading Consequences project](https://commoditiesofempire.org.uk/research/primary-sources/trading-consequences/) [@clifford2016]: extracting a vast amount of information on the geographical location of commodities exchanged in the British economic world during the long 19th century (1789-1914).
+
+- In the [Mapping the State of the Union](https://www.theatlantic.com/politics/archive/2015/01/mapping-the-state-of-the-union/384576/), Mitch Fraas and Ben Schmidt extract the locations mentioned in the 224 State of Union addresses delivered yearly since 1790.
+
+- [The emotions of London](https://litlab.stanford.edu/projects/emotions-london/) project text-mines place-names from 18th- and 19th-century novels and the emotions they elicit in the corpus.
+
+## Aerial imagery / Satellite images
+
+National agencies started to survey their entire territory using aerial photographs in the 1930s, a practice that continued to the present and therefore constitute an important source of historical information (with millions of aerial photos at multiple points in time). Recent examples using historical aerial photographs are @sylvester2012, @midgley2017, @pinol2018, @carvalho2021 and @llena2023 that track the temporal evolution of urban areas, crop fields, glacial dynamics, coastal erosion and forest cover (and land abandonment). 
+
+More recently, satellite imagery have become publicly available and have open up completely new ways of doing research. As well as high spatial resolution and global geographic coverage, these remote sensing technologies provide information that it is difficult to obtain by other means [@donaldson2016]. The LANDSAT program was launched in 1972 and other programmes joined in in the 1990s and later, so contemporary historians can make use of these technologies to provide visual evidence, as well as comparing images taken at different periods and track changes in land cover and quality, night lights, topography, deforestation, pollution, drought, weather and climatic fluctuations, etc. Within the social sciences, this information has been primarily employed by economists; see @donaldson2016 and @wuepper2025 for surveys of recent literature. Likewise, @munteanu2024 stresses the potential of globally available black-and-white satellite photographs available from the 1960s.
+
+## Scanned historical maps
+
+Historical maps contain spatial information about political and cultural borders, transport infrastructure, topographical information, land cover, buildings, etc., so they constitute a fantastic historical source. Here are some online collections:
+
+- The [US Historical Topographic Map Collection](https://www.usgs.gov/programs/national-geospatial-program/historical-topographic-maps-preserving-past)
+
+- The [David Rumsey Map Collection](https://www.davidrumsey.com)
+
+- [OldMapsOline](https://www.oldmapsonline.org/en#position=6/63.428/10.401) 
+
+As examples of projects geo-referencing old maps, see the [Viabundus Project](https://www.degruyter.com/document/doi/10.1515/jbwg-2023-0007/html?lang=en) [@holterman2023]. Based on the atlas [Hansische Handelsstraßen](https://www.deutsche-digitale-bibliothek.de/item/U2K4E7IF7VOJYUUDXOQX2MHK6ZHIYE7J), this project has produced shapefiles containing the roads and waterways connecting northern Europe between 1350 and 1650, as well as the institutional nodes behind these transportation networks (towns and settlements, tolls, fairs, staple markets, etc.). Likewise, while @heblich2021 relies on topographical maps published between 1880 and 1900 to extract the location of 5,000 industrial chimneys and trace atmospheric pollution patterns in British cities, @redding2024 maps the destruction of London during the Second World War. Similarly, @siodla2015 and @hornbeck2017 use historical maps to understand the effects of the great fires in Boston and San Francisco. Likewise, Charles Butcher and his team (here at NTNU) rely on maps to identify the political influence of pre-colonial African states. More examples can be found in these blog posts by [Alexandra Cirone](https://broadstreet.blog/2021/03/01/finding-historical-data-iv-a-post-with-cool-maps/) and [James Feigenbaum](https://broadstreet.blog/2021/10/06/maps-as-data-ec365/).
+
+Digitising old maps involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile). Although this process can be done using R, it is more intuitive using specific GIS software such as [QGIS](https://qgis.org) or [ArcGIS](https://arcgis.com/index.html). The [Programming Historian](https://programminghistorian.org/en/lessons/vector-layers-qgis) and the [Geospatial Historian](https://geospatialhistorian.wordpress.com) offer great tutorials both in QGIS and ArcGIS [@clifford2013; see also @gregory2007]. Manually digitising points, lines or polygons can nonetheless be a time-consuming activity. Alternatively, advances in computational methods enable automatically extracting digital versions from scanned images of historical maps (or aerial images). Although the combination of text and symbols (lines, polygons, etc.) still pose significant challenges to automated pattern recognition methods, this is already a very promising area [@hosseini2021; @combes2022; @litvine2024; @mcdonough2024].
+
+## Historical shapefiles / rasters
+
+Historians have been busy creating historical GIS, so there are plenty of shapefiles already available to the public. 
+
+- The [China Historical GIS](https://chgis.fas.harvard.edu) with placenames and administrative units for the Chinese Dynasties.
+
+- The [Great Britain Historical GIS](http://www.geog.port.ac.uk/hist-bound/project_rep/proj_gbhgis.htm) supplying administrative boundaries since the early 19th century.
+
+- The US [National Historical Geographic Information System](https://www.nhgis.org) containing all levels of U.S. census geography, including states, counties, tracts, and blocks, from 1790 through the present).
+
+- The [French Historical GIS, 1700-2020](https://zenodo.org/records/3727274) (including administrative units, transportation networks, etc.; @litvine2023). See also the [Mapping the Third Republic. A Geographic Information System of France (1870–1940)](https://mpra.ub.uni-muenchen.de/103304/) [@gay2020]. 
+
+- Historical regional boundaries and transportation infraestructure in Europe since the mid-19th century [@marti2023]. 
+
+Likewise, different websites have collected lists of national historical GIS, as well as examples of projects using GIS tools, such as [The Historical GIS Research Network](http://www.hgis.org.uk/resources.htm) or [Geospatial Historian](https://geospatialhistorian.wordpress.com/finding-data/). 
+
+- **Historical gazetteers**. The project [A vision of Britain through time](http://www.visionofbritain.org.uk/) has gathered around 2 million historical place names from the early 19th century onwards. [The Digital Gazetteer of the Song Dynasty](http://d-scholarship.pitt.edu/44108/) (906-1276 CE) [@mostern2022]. [Pleiades](https://pleiades.stoa.org), a community-built gazetteer of ancient places. Similarly, the project ESPAREL has extracted and geo-referenced the almost 20,000 population entities existing in the 1887 Spanish nomenclator and link them with their current and past counterparts [@esparel2022]. The [World Historical Gazetteer](https://whgazetteer.org) is a platform that hosts many of these initiatives geo-locating historical place names across the world. 
+
+- [Historical Climatology](https://www.historicalclimatology.com/cliwoc.html)
+
+- Ships' logbooks are a especially valuable source since their entries not only recorded the vessels' geographical position (longitude and latitude), but also systematic meteorological information (and other events, such as whales seen or captured, etc.) daily or even several times a day [@smith2012; @garcia2018; @walker2024]. See also the [Whaling History](https://whalinghistory.org), the [Weather Time Machine](https://www.reuters.com/graphics/CLIMATE-CHANGE-ICE-SHIPLOGS/0100B4QE2FC/) or the [Old Weather](https://www.oldweather.org) projects. 
+
+- The [Historical Settlement Data Compilation for the United States (HISDAC-US)](https://dataverse.harvard.edu/dataverse/hisdacus?q=&types=dataverses%3Adatasets&sort=dateSort&order=desc&page=1) [@uhl2021; @connor2020]. Historical gridded settlement layers derived from property records since 1810. These files count the number of built-up properties devoted to different uses (agricultural, commercial, industrial, residential, etc.) per grid cell and therefore allows tracking the evolution of urbanization and land Use use over time.
+
+These are just some examples. A fine-grain online search, specifying the area, the period and the topic of interest may also produce the desired results. Moreover, plenty of research, either by public institutions or individual researchers, has also used GIS tools but has not made the underlying data public. Most maps published nowadays in books, academic journals, newspapers and websites make use of these tools and therefore are based on shape or raster files that can be shared and reproduced. Authors are usually happy to share their materials providing they are properly referenced, so contacting them is always advisable.
+
+## Historical datasets including spatial coordinates
+
+As well as historical locations themselves, there are also plenty of examples of historical information that has also been geo-located. 
+
+- [VOC Dataset](https://zenodo.org/records/10599528) [@petram2024]: This dataset stores the pay ledgers of the Dutch East India Company’s (VOC), primarily from the eighteenth century. It contains almost 800,000 records containing each crew member’s name, place of origin, rank, wage, etc. The raw information has been carefully curated and stored in several .csv files that can be merged together using the corresponding IDs. Read more about this source [here](https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.210).
+
+- [Tudor Network of Power](https://github.com/tudor-networks-of-power/code/tree/main/TNP_DATA) [@tnp2023]. This data contains all (surviving) items of correspondence in the Tudor State Papers (1509-1603), which are the official government records of the Tudor period in England. As explained by the authors [@ahnert-etal2023], data cleaning and curation constituted a significant effort. As well as more traditional quantitative methods, this data set is suited for the network analysis.
+
+- [Theater History of Operations Reports](https://www.kaggle.com/usaf/vietnam-war-bombing-operations) provides 4,8 million observations defined by the position of an aircraft bombing a particular target in the Vietnam War between 1965 and 1975.
+
+- [A brief history of human time](https://medialab.github.io/bhht-datascape/#about) [@laouenan2022]. This database includes information on 2.2 million notable individuals born between 3500BC and 2020 (5,500 years of human history) collected from Wikipedia and other secondary sources. As well as dates of birth and death, the data set includes place of birth and other features characterising these individuals (when available). As the authors document, Anglo-Saxon personalities are over-represented due to the bias naturally present in existing projects based on the English edition of Wikipedia. See also @schich-etal2014 who used the dates of birth and death of a subsample of this data (150,000 notable individuals) to map the evolution of European cultural history during the last 2,000 years.
+
+- [Academich scholars and literati in Medieval and Early Modern Europe](https://perso.uclouvain.be/david.delacroix/menushiny.html) [@delacroix2021]. Relational database on around 83,000 scholars and literati active in European Academia between 1000 and 1800. As well as place and year of birth and details, it details to which institutions these individuals belonged (universities, scientific academies, etc.). See @delacroix2025a and @delacroix2025b for two applications using social network analysis.
+
+Again, a targeted online search may yield results specific to your interests. Although searching for area and period of study is always useful, many topics are also very well covered: population, education [@cappelli2023], social conflicts [@chambru2022], lighthouses [@bogart2022], sailing routes and wrecks ([here](https://www.keynesfund.econ.cam.ac.uk/projects/lighthouses-economics-redivivus-analysis)), to mention only a few.
+
+Another alternative is to rely on contemporary shapefiles. Physical features (i.e. rivers, coastlines, etc.) are not likely to have changed much, so you easily find appropriate GIS files online or any national agency. Likewise, many historical locations (i.e. settlements, regional entities, etc.) still exist and are contained in contemporary geo-referenced databases.
+
+Alternatively, spatial coordinates can be gathered from GPS receivers, online searches or google map itself. Opening Google Maps and clicking in any point provides this information. Notice though that google maps reports latitude first and longitude second, so the order is switched. This kind of information is, for instance, very important for recording archaeological locations.
+
+
+
+## Norwegian data
+
+The [Kommunedatabasen](https://kommunedatabasen.sikt.no) also has digitised a huge amount of historical information on municipalities (kommuner). You can request shapefiles with the (changing) municipal boundaries from 1880 onwards.
+
+
+
+Other additional sources can be found below:
+
+
+
+
+## Miscellaneous
+
+Those students with other research interests can choose their dataset on their own. The possibilities are endless. Here are just a few examples:
+
+
+
+As mentioned above, I encourage you to find your own dataset.

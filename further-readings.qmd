@@ -1,0 +1,22 @@
+---
+title: "Further reading"
+---
+
+For an expanded coverage how the topics discussed during the course can be implemented in R, see @pebesma2022, @tennekes2022, @bivand2023, @gimond2023, @moraga2023 and @lovelace2024.
+
+For more details on GIS and mapping, see @crampton2010 and @bolstad2023.
+
+For a more detailed discussion on how historians use GIS tools, see @gregory2007, @knowles2008, @marti2011, @gregory2014, @gregory2018; @lawson2021, @travis2020, @cole2022, @mogorovich2022 and @mcdonough2024. See also @presner2015 for a discussion on the geospatial turn in the humanities in general. Spatial history nonetheless comes in a variety of forms, not necessarily involving using GIS tools [@bavaj2022b]. Maps actually constitute another historical *source*, so they contain useful information that helps knowing more about the past. In this regard, historians of maps and mapping practices often study maps as cultural objects [@mcdonough2024, p. 99]. @schulten2012 and @spychal2024, for instance, trace the growing use of maps in the US and UK during the 19^th^ century as tools for shaping history, policy and national identity.
+
+Online visualisations:
+
+- [US frontier expansion of post offices during the 19^th^ century](https://cblevins.github.io/us-post-offices/)
+
+- [Racial lynchings in the US, 1877-1950](https://lynchinginamerica.eji.org/)
+
+- [Oceanic shipping from 18^th^- and 19^th^-century ship's logs](http://sappingattention.blogspot.com/2012/11/reading-digital-sources-case-study-in.html)
+
+- [Mapping the State of the Union](https://www.theatlantic.com/politics/archive/2015/01/mapping-the-state-of-the-union/384576/)
+
+
+

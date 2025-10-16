@@ -1,0 +1,24 @@
+## Welcome to digital mapping!
+
+February 15-16, 2026 -- 09:15-16:00 -- Room U201 ([Akrinn](https://maps.app.goo.gl/neGSMmi15nzrfNyr5), Kalvskinnet)
+
+Instructor: [Francisco J. Beltrán Tapia](https://fjbeltrantapia.github.io)
+
+\vspace{1em}
+
+This course, offered by the [Faculty of Humanities](https://www.ntnu.edu/hf) at the [Norwegian University of Science and Technology](https://www.ntnu.edu), provides a practical introduction on how to apply Geographic Information Systems and its associated methods in the humanities and the social sciences.
+
+::: {.column-margin}  
+![The cholera epidemic in Soho (London), 1854 ([source](https://geodacenter.github.io/data-and-lab/data/snow_documentation.pdf)).](images/soho.png){width=100% height=100%} 
+:::
+
+## Description
+
+Geo-spatial information is crucially shaping our understanding of the world we live in. GIS tools are being rapidly adopted by local and national policy makers and the business sector. Likewise, not only the humanities and the social sciences need to explicitly consider the spatial dimension of economic and social processes, but thinking spatially facilitates the adoption of innovative research techniques. Scheduled over four three-hour lab sessions, this hands-on course provides a thorough overview of how to map spatial information and apply GIS tools in empirical studies using R, a free programming software widely used by practitioners in many different fields.
+
+The course is taught intensively in four 3-hour sessions over two days (morning and afternoon sessions; 12 hours in total). Each session combines lectures and computer practicals. No previous background in computing or statistics is required.
+
+### Important warning
+
+Please follow the [Instructions](instructions.html) section to prepare for the course in advance. As well as reading the article [Quantifying history]{.underline}, this involves downloading the [course materials]{.underline}, installing and getting familiar with [R]{.underline} and [RStudio]{.underline} and going through the background information on the [case-studies]{.underline} we will be exploring.
+

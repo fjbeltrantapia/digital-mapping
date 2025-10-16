@@ -1,0 +1,34 @@
+---
+title: "Syllabus"
+---
+
+By allowing researchers to integrate spatial dimensions into their analyses, digital mapping and GIS tools ultimately enhance our understanding of the phenomenon we are studying. 
+
+This course focuses on: 
+
+<ol>
+  <li>Creating quality maps using polygons, points or pixels</li>
+
+  <li>Discussing Coordinate Reference Systems (CRSs)</li>
+
+  <li>Creating your own spatial features
+    <ol type="a">
+      <li>Using existing GIS files</li>
+      <li>Geo-coding</li>
+      <li>Digitising your own maps: old maps or aerial / satellite images (QGIS)</li>
+    </ol>
+  </li>
+
+  <li>Implementing spatial analysis: density (heat) maps, spatial correlation</li>
+
+  <li>Computing variables using geo-spatial information (geo-computation)
+    <ol type="a">
+      <li>Calculating distances</li>
+      <li>Implementing spatial joins</li>
+      <li>Computing zonal statistics</li>
+    </ol>
+  </li>
+</ol>
+
+
+The course mostly relies on R but will also introduce QGIS.

@@ -1,0 +1,82 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Digital mapping for the humanities and the social sciences - HIST8872"
+  
+  navbar:
+    type: inverse
+    right:
+    - text: "Overview"
+      icon: fa-home
+      href: index.qmd
+    - text: "Syllabus"
+      icon: fa-home
+      href: syllabus.qmd      
+    - text: "Instructions"
+      icon: fa-list-ul
+      href: instructions.qmd
+    - text: "Intro to R"
+      icon: fa-book
+      href: get-r.qmd      
+    - text: "Case-studies"
+      icon: fa-book
+      menu: 
+      - text: "The Paisley Dataset"
+        href: backg-paisley.qmd
+      - text: "19th-c. Spanish literacy"
+        href: backg-educ.qmd        
+      - text: "The State of the Union Speeches"
+        href: backg-speeches.qmd
+      - text: "The Tudor Network of Letters"
+        href: backg-tnp.qmd    
+    - text: "Other sources"
+      href: other-data.qmd
+    - text: "Further readings"
+      href: further-readings.qmd  
+  sidebar:
+    title: "Contents"
+    style: "docked"
+    # pinned: true
+    # collapse-level: 3
+    contents:
+      - text: "Contents"
+        file: index.qmd
+      - section: "1. Digital mapping"
+        contents: 
+          - text: "1.1. Polygons"
+          - text: "1.2. Points" 
+          - text: "1.3. Pixels" 
+          - text: "1.4. Coordinate Reference Systems" 
+      - section: "2. Creating spatial features"
+        contents:
+          - text: "2.1. Existing GIS files"
+          - text: "2.2. Adding XY coordinates"
+          - text: "2.3. Geo-coding"
+          - text: "2.4. Digitising historical maps"
+      - section: "3. Spatial analysis"
+        contents:
+          - text: "3.1. Density (heat) maps"
+          - text: "3.2. Spatial correlation"
+      - section: "4. Geo-computation"
+        contents: 
+          - text: "4.1. Distances"
+          - text: "4.2 Spatial joins" 
+          - text: "4.3 Zonal statistics" 
+bibliography: refs.bib
+
+format:
+  html:
+    page-layout: full
+    grid:
+      margin-width: 420px
+    theme: cosmo
+    css: styles.css
+    toc: true
+    fig-cap: false
+    fig-number: false
+    linkcolor: $blue
+
+
+
