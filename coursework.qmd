@@ -28,6 +28,8 @@ For inspiration, see the following [**blogposts**]{.underline}:
 
 - [Stalin's famine](https://www.broadstreet.blog/p/stalins-famine)
 
+- [Where the Dutch East India Company crews came from](https://maritimecareers.eu/2018/06/11/where-the-voc-crews-came-from/)
+
 Check also the following [**online visualisations**]{.underline}:
 
 - [US frontier expansion of post offices during the 19^th^ century](https://cblevins.github.io/us-post-offices/)
@@ -37,3 +39,7 @@ Check also the following [**online visualisations**]{.underline}:
 - [Oceanic shipping from 18^th^- and 19^th^-century ship's logs](http://sappingattention.blogspot.com/2012/11/reading-digital-sources-case-study-in.html)
 
 - [Mapping the State of the Union](https://www.theatlantic.com/politics/archive/2015/01/mapping-the-state-of-the-union/384576/)
+
+- [Locating London's past](https://www.locatinglondon.org)
+
+- [Mapping emotions in 18^th^- and 19^th^-century London](https://news.stanford.edu/stories/2017/03/mapping-emotions-london)
