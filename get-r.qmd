@@ -8,7 +8,7 @@ execute:
   message: false
 ---
 
-Implementing quantitative or computational analyses to historical (or any other) data requires some sort of statistical software. We will rely on **R**, a open-source free statistical software widely used by practitioners in many different fields both inside and outside academia. Although it is possible to work directly in R, using an integrated interface such as **RStudio** makes things much easier. RStudio basically integrates a text editor with the R console, so you can write, run and see the results of your analyses more easily. 
+Drawing digital maps, applying GIS tools or implementing other spatial analyses requires some sort of statistical software. We will rely on **R**, a open-source free statistical software widely used by practitioners in many different fields both inside and outside academia. Although it is possible to work directly in R, using an integrated interface such as **RStudio** makes things much easier. RStudio basically integrates a text editor with the R console, so you can write, run and see the results of your analyses more easily. 
 
 We will be therefore download and install both software (**R** and **RStudio**) in your computer. Here is a [link](https://posit.co/download/rstudio-desktop/) to access them (the version you install depends on whether you are using Windows or Mac).
 
@@ -76,7 +76,7 @@ Starting a R script.
 
 As well as the appropriate software (R and RStudio), this session uses two historical data sets to illustrate the concepts and methods covered here (you should have downloaded them). In order to start exploring this information, we first need to import the data into the R environment. 
 
-As an illustration, let's focus on the **Paisley dataset**, one of the historical sources we will be exploring here. The raw data is stored as an excel spreadsheet named "paisley-data.xlsx" in the folder "data". The command `readxl()` imports this excel file into the R environment. Although `readxl` is contained in the tidyverse package, you still need to open it explicitly using `library()`.
+As an illustration, let's focus on the **Paisley dataset**, one of the historical sources we will be exploring here (and part of the course materials). The raw data is stored as an excel spreadsheet named "paisley-data.xlsx" in the folder "data". The command `readxl()` imports this excel file into the R environment. Although `readxl` is contained in the tidyverse package, you still need to open it explicitly using `library()`.
 
 ```{r}
 library(readxl)

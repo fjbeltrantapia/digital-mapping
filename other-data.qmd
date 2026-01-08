@@ -2,7 +2,7 @@
 title: "Sources of spatial data"
 ---
 
-Below you can find a curated set of varied datasets that you can use for the class assignments and your own research projects. Please make sure to read the underlying documentation describing the information. The list is obviously highly selected based on my own interests and availability, so you are also free to choose your own sources.
+Below you can find a curated set of varied datasets that you can use for the class assignment and your own research projects. Please make sure to read the underlying documentation describing the information. The list is obviously highly selected based on my own interests and availability, so you are also free to choose your own sources.
 
 Different R packages also make it easy to import spatial objects. For instance, the packages `geodata`, `spData`, `rnaturalearth` or `maps` facilitate access to climate, crops, elevation, land use, soil, administrative boundaries and other data (@moraga2023 surveys some of these packages [here](https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html)). National agencies will also have shapefiles with all settlements and many other spatial features. [GeoNorge](https://www.geonorge.no), for instance, provides thousands of shapefiles and raster files for Norway.
 
@@ -54,6 +54,10 @@ Historical maps contain spatial information about political and cultural borders
 
 - [OldMapsOline](https://www.oldmapsonline.org/en#position=6/63.428/10.401) 
 
+- The [Library of Congress Map Collections](https://www.loc.gov/maps/collections)
+
+Check also this blogpost on [Finding historical data IV: A post with cool maps](https://www.broadstreet.blog/p/finding-historical-data-iv-a-post-with-cool-maps).
+
 As examples of projects geo-referencing old maps, see the [Viabundus Project](https://www.degruyter.com/document/doi/10.1515/jbwg-2023-0007/html?lang=en) [@holterman2023]. Based on the atlas [Hansische Handelsstraßen](https://www.deutsche-digitale-bibliothek.de/item/U2K4E7IF7VOJYUUDXOQX2MHK6ZHIYE7J), this project has produced shapefiles containing the roads and waterways connecting northern Europe between 1350 and 1650, as well as the institutional nodes behind these transportation networks (towns and settlements, tolls, fairs, staple markets, etc.). Likewise, while @heblich2021 relies on topographical maps published between 1880 and 1900 to extract the location of 5,000 industrial chimneys and trace atmospheric pollution patterns in British cities, @redding2024 maps the destruction of London during the Second World War. Similarly, @siodla2015 and @hornbeck2017 use historical maps to understand the effects of the great fires in Boston and San Francisco. Likewise, Charles Butcher and his team (here at NTNU) rely on maps to identify the political influence of pre-colonial African states. More examples can be found in these blog posts by [Alexandra Cirone](https://broadstreet.blog/2021/03/01/finding-historical-data-iv-a-post-with-cool-maps/) and [James Feigenbaum](https://broadstreet.blog/2021/10/06/maps-as-data-ec365/).
 
 Digitising old maps involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile). Although this process can be done using R, it is more intuitive using specific GIS software such as [QGIS](https://qgis.org) or [ArcGIS](https://arcgis.com/index.html). The [Programming Historian](https://programminghistorian.org/en/lessons/vector-layers-qgis) and the [Geospatial Historian](https://geospatialhistorian.wordpress.com) offer great tutorials both in QGIS and ArcGIS [@clifford2013; see also @gregory2007]. Manually digitising points, lines or polygons can nonetheless be a time-consuming activity. Alternatively, advances in computational methods enable automatically extracting digital versions from scanned images of historical maps (or aerial images). Although the combination of text and symbols (lines, polygons, etc.) still pose significant challenges to automated pattern recognition methods, this is already a very promising area [@hosseini2021; @combes2022; @litvine2024; @mcdonough2024].
@@ -104,23 +108,16 @@ Another alternative is to rely on contemporary shapefiles. Physical features (i.
 
 Alternatively, spatial coordinates can be gathered from GPS receivers, online searches or google map itself. Opening Google Maps and clicking in any point provides this information. Notice though that google maps reports latitude first and longitude second, so the order is switched. This kind of information is, for instance, very important for recording archaeological locations.
 
-
-
 ## Norwegian data
 
-The [Kommunedatabasen](https://kommunedatabasen.sikt.no) also has digitised a huge amount of historical information on municipalities (kommuner). You can request shapefiles with the (changing) municipal boundaries from 1880 onwards.
+- [GeoNorge](https://www.geonorge.no/en) is the place to go regarding map data and other location information in Norway. 
 
-
-
-Other additional sources can be found below:
-
-
-
+- The [Kommunedatabasen](https://kommunedatabasen.sikt.no) also has digitised a huge amount of historical information on municipalities (kommuner). You can request shapefiles with the (changing) municipal boundaries from 1880 onwards.
 
 ## Miscellaneous
 
-Those students with other research interests can choose their dataset on their own. The possibilities are endless. Here are just a few examples:
+Those students with other research interests can choose their data set on their own. The possibilities are endless. Here are just a few additional examples. Make sure that they provide spatial coordinates or that you can get them by other means (i.e. geocoding).
 
+- [Kaggle](https://www.kaggle.com/datasets) or [TidyTuesday](https://github.com/rfordatascience/tidytuesday?tab=readme-ov-file#datasets)  gather a wide variety of data sets. See, for instance, the aerial bombing operations in [World War II](https://www.kaggle.com/datasets/usaf/world-war-ii) or [Vietnam War](https://www.kaggle.com/datasets/usaf/vietnam-war-bombing-operations), or the [Significant earthquakes, 1900-Present](https://www.kaggle.com/datasets/usamabuttar/significant-earthquakes), among many others. You can also check [Data is Plural](https://www.data-is-plural.com/archive/) for a curated list of other data sets, mostly contemporary.
 
-
-As mentioned above, I encourage you to find your own dataset.
+As mentioned above, I encourage you to find your own source of spatial data.

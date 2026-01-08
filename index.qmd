@@ -1,6 +1,10 @@
 ## Welcome to digital mapping!
 
-February 2026 -- 09:15-16:00 -- TBC ([Akrinn](https://maps.app.goo.gl/neGSMmi15nzrfNyr5), Kalvskinnet)
+::: {.callout-note appearance="simple"}
+
+February 11-12, 2026 -- 09:15-16:00 -- Room L505 ([Akrinn](https://maps.app.goo.gl/neGSMmi15nzrfNyr5), Kalvskinnet)
+
+:::
 
 Instructor: [Francisco J. Beltrán Tapia](https://fjbeltrantapia.github.io)
 
@@ -18,7 +22,9 @@ Geo-spatial information is crucially shaping our understanding of the world we l
 
 The course is taught intensively in four 3-hour sessions over two days (morning and afternoon sessions; 12 hours in total). Each session combines lectures and computer practicals. No previous background in computing or statistics is required.
 
+::: {.callout-important}
 ### Important warning
 
-Please follow the [Instructions](instructions.html) section to prepare for the course in advance. As well as reading the article [Quantifying history]{.underline}, this involves downloading the [course materials]{.underline}, installing and getting familiar with [R]{.underline} and [RStudio]{.underline} and going through the background information on the [case-studies]{.underline} we will be exploring.
+Please follow the [Instructions](instructions.html) section to prepare for the course in advance. This involves downloading the [course materials]{.underline}, installing [R]{.underline} and [RStudio]{.underline} and getting familiar with this software, as well as installing [QGIS]{.underline}. It is also advisable to get some inspiration on how to use use maps and GIS tools on your own research by checking the blogposts and online visualisations listed [here](coursework.html).
 
+:::

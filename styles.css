@@ -1,7 +1,7 @@
 /* css styles */
-
 /* Reduce space between static maps and their captions */
-figure {
+
+.figure {
   margin-bottom: 0.5em !important;  /* tighten space below figure */
 }
 
@@ -10,8 +10,11 @@ figure {
   text-align: center;               /* optional: keep caption centered */
 }
 
+.figure-caption {         /*note that this is slightly different from the above*/
+  text-align: center;
+}
+
 .quarto-figure .figure-caption .figure-number {
   display: none;
 }
-
 

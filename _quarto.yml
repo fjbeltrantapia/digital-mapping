@@ -11,26 +11,25 @@ website:
     - text: "Overview"
       icon: fa-home
       href: index.qmd
-    - text: "Syllabus"
-      icon: fa-home
-      href: syllabus.qmd      
     - text: "Instructions"
       icon: fa-list-ul
       href: instructions.qmd
     - text: "Intro to R"
       icon: fa-book
       href: get-r.qmd      
-    - text: "Case-studies"
-      icon: fa-book
-      menu: 
-      - text: "The Paisley Dataset"
-        href: backg-paisley.qmd
-      - text: "19th-c. Spanish literacy"
-        href: backg-educ.qmd        
-      - text: "The State of the Union Speeches"
-        href: backg-speeches.qmd
-      - text: "The Tudor Network of Letters"
-        href: backg-tnp.qmd    
+    #- text: "Case-studies"
+      #icon: fa-book
+      #menu: 
+      #- text: "The Paisley Dataset"
+        #href: backg-paisley.qmd
+      #- text: "19th-c. Spanish literacy"
+        #href: backg-educ.qmd        
+      #- text: "The State of the Union Speeches"
+        #href: backg-speeches.qmd
+      #- text: "The Tudor Network of Letters"
+        #href: backg-tnp.qmd    
+    - text: "Coursework"
+      href: coursework.qmd  
     - text: "Other sources"
       href: other-data.qmd
     - text: "Further readings"

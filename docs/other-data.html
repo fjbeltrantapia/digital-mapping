@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -50,15 +50,16 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f8fa45338e7d851592d6b4ad57ea2445.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-927cc4023c64fc8e79cdc28ed271ad53.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,7 +92,7 @@ div.csl-indent {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -114,11 +115,6 @@ div.csl-indent {
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> <i class="bi bi-fa-home" role="img">
-</i> 
-<span class="menu-text">Syllabus</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./instructions.html"> <i class="bi bi-fa-list-ul" role="img">
 </i> 
 <span class="menu-text">Instructions</span></a>
@@ -128,31 +124,10 @@ div.csl-indent {
 </i> 
 <span class="menu-text">Intro to R</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-case-studies" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-fa-book" role="img">
-</i> 
- <span class="menu-text">Case-studies</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-case-studies">    
-        <li>
-    <a class="dropdown-item" href="./backg-paisley.html">
- <span class="dropdown-text">The Paisley Dataset</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./coursework.html"> 
+<span class="menu-text">Coursework</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./backg-educ.html">
- <span class="dropdown-text">19th-c.&nbsp;Spanish literacy</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./backg-speeches.qmd">
- <span class="dropdown-text">The State of the Union Speeches</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./backg-tnp.html">
- <span class="dropdown-text">The Tudor Network of Letters</span></a>
-  </li>  
-    </ul>
-  </li>
   <li class="nav-item">
     <a class="nav-link active" href="./other-data.html" aria-current="page"> 
 <span class="menu-text">Other sources</span></a>
@@ -211,8 +186,8 @@ div.csl-indent {
 </header>
 
 
-<p>Below you can find a curated set of varied datasets that you can use for the class assignments and your own research projects. Please make sure to read the underlying documentation describing the information. The list is obviously highly selected based on my own interests and availability, so you are also free to choose your own sources.</p>
-<p>Different R packages also make it easy to import spatial objects. For instance, the packages <code>geodata</code>, <code>spData</code>, <code>rnaturalearth</code> or <code>maps</code> facilitate access to climate, crops, elevation, land use, soil, administrative boundaries and other data (<span class="citation" data-cites="moraga2023">(<a href="#ref-moraga2023" role="doc-biblioref"><strong>moraga2023?</strong></a>)</span> surveys some of these packages <a href="https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html">here</a>). National agencies will also have shapefiles with all settlements and many other spatial features. <a href="https://www.geonorge.no">GeoNorge</a>, for instance, provides thousands of shapefiles and raster files for Norway.</p>
+<p>Below you can find a curated set of varied datasets that you can use for the class assignment and your own research projects. Please make sure to read the underlying documentation describing the information. The list is obviously highly selected based on my own interests and availability, so you are also free to choose your own sources.</p>
+<p>Different R packages also make it easy to import spatial objects. For instance, the packages <code>geodata</code>, <code>spData</code>, <code>rnaturalearth</code> or <code>maps</code> facilitate access to climate, crops, elevation, land use, soil, administrative boundaries and other data (<span class="citation" data-cites="moraga2023">Moraga (<a href="#ref-moraga2023" role="doc-biblioref">2023</a>)</span> surveys some of these packages <a href="https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html">here</a>). National agencies will also have shapefiles with all settlements and many other spatial features. <a href="https://www.geonorge.no">GeoNorge</a>, for instance, provides thousands of shapefiles and raster files for Norway.</p>
 <section id="shapefiles" class="level2">
 <h2 class="anchored" data-anchor-id="shapefiles">Shapefiles</h2>
 <ul>
@@ -234,17 +209,17 @@ div.csl-indent {
 </section>
 <section id="textual-corpuses" class="level2">
 <h2 class="anchored" data-anchor-id="textual-corpuses">Textual corpuses</h2>
-<p>As discussed during the course, there are computational tools that allow extracting locations from textual corpuses (entity recognition) and then assign them geographic coordinates (geo-coding). The package <a href="https://jessecambon.github.io/tidygeocoder/"><code>tidygeocoder</code></a> “makes getting data from geocoding services easy” <span class="citation" data-cites="cambon2021">(<a href="#ref-cambon2021" role="doc-biblioref"><strong>cambon2021?</strong></a>)</span>. As illustrations, this kind of tools have been employed in the following projects:</p>
+<p>As discussed during the course, there are computational tools that allow extracting locations from textual corpuses (entity recognition) and then assign them geographic coordinates (geo-coding). The package <a href="https://jessecambon.github.io/tidygeocoder/"><code>tidygeocoder</code></a> “makes getting data from geocoding services easy” <span class="citation" data-cites="cambon2021">(<a href="#ref-cambon2021" role="doc-biblioref">Cambon et al. 2021</a>)</span>. As illustrations, this kind of tools have been employed in the following projects:</p>
 <ul>
-<li><p>The <a href="https://commoditiesofempire.org.uk/research/primary-sources/trading-consequences/">Trading Consequences project</a> <span class="citation" data-cites="clifford2016">(<a href="#ref-clifford2016" role="doc-biblioref"><strong>clifford2016?</strong></a>)</span>: extracting a vast amount of information on the geographical location of commodities exchanged in the British economic world during the long 19th century (1789-1914).</p></li>
+<li><p>The <a href="https://commoditiesofempire.org.uk/research/primary-sources/trading-consequences/">Trading Consequences project</a> <span class="citation" data-cites="clifford2016">(<a href="#ref-clifford2016" role="doc-biblioref">Clifford et al. 2016</a>)</span>: extracting a vast amount of information on the geographical location of commodities exchanged in the British economic world during the long 19th century (1789-1914).</p></li>
 <li><p>In the <a href="https://www.theatlantic.com/politics/archive/2015/01/mapping-the-state-of-the-union/384576/">Mapping the State of the Union</a>, Mitch Fraas and Ben Schmidt extract the locations mentioned in the 224 State of Union addresses delivered yearly since 1790.</p></li>
 <li><p><a href="https://litlab.stanford.edu/projects/emotions-london/">The emotions of London</a> project text-mines place-names from 18th- and 19th-century novels and the emotions they elicit in the corpus.</p></li>
 </ul>
 </section>
 <section id="aerial-imagery-satellite-images" class="level2">
 <h2 class="anchored" data-anchor-id="aerial-imagery-satellite-images">Aerial imagery / Satellite images</h2>
-<p>National agencies started to survey their entire territory using aerial photographs in the 1930s, a practice that continued to the present and therefore constitute an important source of historical information (with millions of aerial photos at multiple points in time). Recent examples using historical aerial photographs are <span class="citation" data-cites="sylvester2012">(<a href="#ref-sylvester2012" role="doc-biblioref"><strong>sylvester2012?</strong></a>)</span>, <span class="citation" data-cites="midgley2017">(<a href="#ref-midgley2017" role="doc-biblioref"><strong>midgley2017?</strong></a>)</span>, <span class="citation" data-cites="pinol2018">(<a href="#ref-pinol2018" role="doc-biblioref"><strong>pinol2018?</strong></a>)</span>, <span class="citation" data-cites="carvalho2021">(<a href="#ref-carvalho2021" role="doc-biblioref"><strong>carvalho2021?</strong></a>)</span> and <span class="citation" data-cites="llena2023">(<a href="#ref-llena2023" role="doc-biblioref"><strong>llena2023?</strong></a>)</span> that track the temporal evolution of urban areas, crop fields, glacial dynamics, coastal erosion and forest cover (and land abandonment).</p>
-<p>More recently, satellite imagery have become publicly available and have open up completely new ways of doing research. As well as high spatial resolution and global geographic coverage, these remote sensing technologies provide information that it is difficult to obtain by other means <span class="citation" data-cites="donaldson2016">(<a href="#ref-donaldson2016" role="doc-biblioref"><strong>donaldson2016?</strong></a>)</span>. The LANDSAT program was launched in 1972 and other programmes joined in in the 1990s and later, so contemporary historians can make use of these technologies to provide visual evidence, as well as comparing images taken at different periods and track changes in land cover and quality, night lights, topography, deforestation, pollution, drought, weather and climatic fluctuations, etc. Within the social sciences, this information has been primarily employed by economists; see <span class="citation" data-cites="donaldson2016">(<a href="#ref-donaldson2016" role="doc-biblioref"><strong>donaldson2016?</strong></a>)</span> and <span class="citation" data-cites="wuepper2025">(<a href="#ref-wuepper2025" role="doc-biblioref"><strong>wuepper2025?</strong></a>)</span> for surveys of recent literature. Likewise, <span class="citation" data-cites="munteanu2024">(<a href="#ref-munteanu2024" role="doc-biblioref"><strong>munteanu2024?</strong></a>)</span> stresses the potential of globally available black-and-white satellite photographs available from the 1960s.</p>
+<p>National agencies started to survey their entire territory using aerial photographs in the 1930s, a practice that continued to the present and therefore constitute an important source of historical information (with millions of aerial photos at multiple points in time). Recent examples using historical aerial photographs are <span class="citation" data-cites="sylvester2012">Sylvester and Rupley (<a href="#ref-sylvester2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="midgley2017">Midgley and Tonkin (<a href="#ref-midgley2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="pinol2018">Pinol (<a href="#ref-pinol2018" role="doc-biblioref">2018</a>)</span>, <span class="citation" data-cites="carvalho2021">Carvalho et al. (<a href="#ref-carvalho2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="llena2023">Llena and Vericat (<a href="#ref-llena2023" role="doc-biblioref">2023</a>)</span> that track the temporal evolution of urban areas, crop fields, glacial dynamics, coastal erosion and forest cover (and land abandonment).</p>
+<p>More recently, satellite imagery have become publicly available and have open up completely new ways of doing research. As well as high spatial resolution and global geographic coverage, these remote sensing technologies provide information that it is difficult to obtain by other means <span class="citation" data-cites="donaldson2016">(<a href="#ref-donaldson2016" role="doc-biblioref">Donaldson and Storeygard 2016</a>)</span>. The LANDSAT program was launched in 1972 and other programmes joined in in the 1990s and later, so contemporary historians can make use of these technologies to provide visual evidence, as well as comparing images taken at different periods and track changes in land cover and quality, night lights, topography, deforestation, pollution, drought, weather and climatic fluctuations, etc. Within the social sciences, this information has been primarily employed by economists; see <span class="citation" data-cites="donaldson2016">Donaldson and Storeygard (<a href="#ref-donaldson2016" role="doc-biblioref">2016</a>)</span> and <span class="citation" data-cites="wuepper2025">Wuepper, Agumba Oluoch, and Hadi (<a href="#ref-wuepper2025" role="doc-biblioref">2025</a>)</span> for surveys of recent literature. Likewise, <span class="citation" data-cites="munteanu2024">Munteanu et al. (<a href="#ref-munteanu2024" role="doc-biblioref">2024</a>)</span> stresses the potential of globally available black-and-white satellite photographs available from the 1960s.</p>
 </section>
 <section id="scanned-historical-maps" class="level2">
 <h2 class="anchored" data-anchor-id="scanned-historical-maps">Scanned historical maps</h2>
@@ -253,9 +228,11 @@ div.csl-indent {
 <li><p>The <a href="https://www.usgs.gov/programs/national-geospatial-program/historical-topographic-maps-preserving-past">US Historical Topographic Map Collection</a></p></li>
 <li><p>The <a href="https://www.davidrumsey.com">David Rumsey Map Collection</a></p></li>
 <li><p><a href="https://www.oldmapsonline.org/en#position=6/63.428/10.401">OldMapsOline</a></p></li>
+<li><p>The <a href="https://www.loc.gov/maps/collections">Library of Congress Map Collections</a></p></li>
 </ul>
-<p>As examples of projects geo-referencing old maps, see the <a href="https://www.degruyter.com/document/doi/10.1515/jbwg-2023-0007/html?lang=en">Viabundus Project</a> <span class="citation" data-cites="holterman2023">(<a href="#ref-holterman2023" role="doc-biblioref"><strong>holterman2023?</strong></a>)</span>. Based on the atlas <a href="https://www.deutsche-digitale-bibliothek.de/item/U2K4E7IF7VOJYUUDXOQX2MHK6ZHIYE7J">Hansische Handelsstraßen</a>, this project has produced shapefiles containing the roads and waterways connecting northern Europe between 1350 and 1650, as well as the institutional nodes behind these transportation networks (towns and settlements, tolls, fairs, staple markets, etc.). Likewise, while <span class="citation" data-cites="heblich2021">(<a href="#ref-heblich2021" role="doc-biblioref"><strong>heblich2021?</strong></a>)</span> relies on topographical maps published between 1880 and 1900 to extract the location of 5,000 industrial chimneys and trace atmospheric pollution patterns in British cities, <span class="citation" data-cites="redding2024">(<a href="#ref-redding2024" role="doc-biblioref"><strong>redding2024?</strong></a>)</span> maps the destruction of London during the Second World War. Similarly, <span class="citation" data-cites="siodla2015">(<a href="#ref-siodla2015" role="doc-biblioref"><strong>siodla2015?</strong></a>)</span> and <span class="citation" data-cites="hornbeck2017">(<a href="#ref-hornbeck2017" role="doc-biblioref"><strong>hornbeck2017?</strong></a>)</span> use historical maps to understand the effects of the great fires in Boston and San Francisco. Likewise, Charles Butcher and his team (here at NTNU) rely on maps to identify the political influence of pre-colonial African states. More examples can be found in these blog posts by <a href="https://broadstreet.blog/2021/03/01/finding-historical-data-iv-a-post-with-cool-maps/">Alexandra Cirone</a> and <a href="https://broadstreet.blog/2021/10/06/maps-as-data-ec365/">James Feigenbaum</a>.</p>
-<p>Digitising old maps involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile). Although this process can be done using R, it is more intuitive using specific GIS software such as <a href="https://qgis.org">QGIS</a> or <a href="https://arcgis.com/index.html">ArcGIS</a>. The <a href="https://programminghistorian.org/en/lessons/vector-layers-qgis">Programming Historian</a> and the <a href="https://geospatialhistorian.wordpress.com">Geospatial Historian</a> offer great tutorials both in QGIS and ArcGIS <span class="citation" data-cites="clifford2013 gregory2007">(<a href="#ref-clifford2013" role="doc-biblioref"><strong>clifford2013?</strong></a>; see also <a href="#ref-gregory2007" role="doc-biblioref"><strong>gregory2007?</strong></a>)</span>. Manually digitising points, lines or polygons can nonetheless be a time-consuming activity. Alternatively, advances in computational methods enable automatically extracting digital versions from scanned images of historical maps (or aerial images). Although the combination of text and symbols (lines, polygons, etc.) still pose significant challenges to automated pattern recognition methods, this is already a very promising area <span class="citation" data-cites="hosseini2021 combes2022 litvine2024 mcdonough2024">(<a href="#ref-hosseini2021" role="doc-biblioref"><strong>hosseini2021?</strong></a>; <a href="#ref-combes2022" role="doc-biblioref"><strong>combes2022?</strong></a>; <a href="#ref-litvine2024" role="doc-biblioref"><strong>litvine2024?</strong></a>; <a href="#ref-mcdonough2024" role="doc-biblioref"><strong>mcdonough2024?</strong></a>)</span>.</p>
+<p>Check also this blogpost on <a href="https://www.broadstreet.blog/p/finding-historical-data-iv-a-post-with-cool-maps">Finding historical data IV: A post with cool maps</a>.</p>
+<p>As examples of projects geo-referencing old maps, see the <a href="https://www.degruyter.com/document/doi/10.1515/jbwg-2023-0007/html?lang=en">Viabundus Project</a> <span class="citation" data-cites="holterman2023">(<a href="#ref-holterman2023" role="doc-biblioref">Holterman and Huang 2023</a>)</span>. Based on the atlas <a href="https://www.deutsche-digitale-bibliothek.de/item/U2K4E7IF7VOJYUUDXOQX2MHK6ZHIYE7J">Hansische Handelsstraßen</a>, this project has produced shapefiles containing the roads and waterways connecting northern Europe between 1350 and 1650, as well as the institutional nodes behind these transportation networks (towns and settlements, tolls, fairs, staple markets, etc.). Likewise, while <span class="citation" data-cites="heblich2021">Heblich, Trew, and Zylberberg (<a href="#ref-heblich2021" role="doc-biblioref">2021</a>)</span> relies on topographical maps published between 1880 and 1900 to extract the location of 5,000 industrial chimneys and trace atmospheric pollution patterns in British cities, <span class="citation" data-cites="redding2024">Redding and Sturm (<a href="#ref-redding2024" role="doc-biblioref">2024</a>)</span> maps the destruction of London during the Second World War. Similarly, <span class="citation" data-cites="siodla2015">Siodla (<a href="#ref-siodla2015" role="doc-biblioref">2015</a>)</span> and <span class="citation" data-cites="hornbeck2017">Hornbeck and Keniston (<a href="#ref-hornbeck2017" role="doc-biblioref">2009</a>)</span> use historical maps to understand the effects of the great fires in Boston and San Francisco. Likewise, Charles Butcher and his team (here at NTNU) rely on maps to identify the political influence of pre-colonial African states. More examples can be found in these blog posts by <a href="https://broadstreet.blog/2021/03/01/finding-historical-data-iv-a-post-with-cool-maps/">Alexandra Cirone</a> and <a href="https://broadstreet.blog/2021/10/06/maps-as-data-ec365/">James Feigenbaum</a>.</p>
+<p>Digitising old maps involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile). Although this process can be done using R, it is more intuitive using specific GIS software such as <a href="https://qgis.org">QGIS</a> or <a href="https://arcgis.com/index.html">ArcGIS</a>. The <a href="https://programminghistorian.org/en/lessons/vector-layers-qgis">Programming Historian</a> and the <a href="https://geospatialhistorian.wordpress.com">Geospatial Historian</a> offer great tutorials both in QGIS and ArcGIS <span class="citation" data-cites="clifford2013 gregory2007">(<a href="#ref-clifford2013" role="doc-biblioref">Clifford, MacFadyen, and Macfarlane 2013</a>; see also <a href="#ref-gregory2007" role="doc-biblioref">Gregory and Ell 2007</a>)</span>. Manually digitising points, lines or polygons can nonetheless be a time-consuming activity. Alternatively, advances in computational methods enable automatically extracting digital versions from scanned images of historical maps (or aerial images). Although the combination of text and symbols (lines, polygons, etc.) still pose significant challenges to automated pattern recognition methods, this is already a very promising area <span class="citation" data-cites="hosseini2021 combes2022 litvine2024 mcdonough2024">(<a href="#ref-hosseini2021" role="doc-biblioref">Hosseini et al. 2021</a>; <a href="#ref-combes2022" role="doc-biblioref">Combes, Gobillon, and Zylberberg 2022</a>; <a href="#ref-litvine2024" role="doc-biblioref">A. D. Litvine et al. 2024</a>; <a href="#ref-mcdonough2024" role="doc-biblioref">McDonough 2024</a>)</span>.</p>
 </section>
 <section id="historical-shapefiles-rasters" class="level2">
 <h2 class="anchored" data-anchor-id="historical-shapefiles-rasters">Historical shapefiles / rasters</h2>
@@ -264,15 +241,15 @@ div.csl-indent {
 <li><p>The <a href="https://chgis.fas.harvard.edu">China Historical GIS</a> with placenames and administrative units for the Chinese Dynasties.</p></li>
 <li><p>The <a href="http://www.geog.port.ac.uk/hist-bound/project_rep/proj_gbhgis.htm">Great Britain Historical GIS</a> supplying administrative boundaries since the early 19th century.</p></li>
 <li><p>The US <a href="https://www.nhgis.org">National Historical Geographic Information System</a> containing all levels of U.S. census geography, including states, counties, tracts, and blocks, from 1790 through the present).</p></li>
-<li><p>The <a href="https://zenodo.org/records/3727274">French Historical GIS, 1700-2020</a> (including administrative units, transportation networks, etc.; <span class="citation" data-cites="litvine2023">(<a href="#ref-litvine2023" role="doc-biblioref"><strong>litvine2023?</strong></a>)</span>). See also the <a href="https://mpra.ub.uni-muenchen.de/103304/">Mapping the Third Republic. A Geographic Information System of France (1870–1940)</a> <span class="citation" data-cites="gay2020">(<a href="#ref-gay2020" role="doc-biblioref"><strong>gay2020?</strong></a>)</span>.</p></li>
-<li><p>Historical regional boundaries and transportation infraestructure in Europe since the mid-19th century <span class="citation" data-cites="marti2023">(<a href="#ref-marti2023" role="doc-biblioref"><strong>marti2023?</strong></a>)</span>.</p></li>
+<li><p>The <a href="https://zenodo.org/records/3727274">French Historical GIS, 1700-2020</a> (including administrative units, transportation networks, etc.; <span class="citation" data-cites="litvine2023">A. Litvine et al. (<a href="#ref-litvine2023" role="doc-biblioref">2023</a>)</span>). See also the <a href="https://mpra.ub.uni-muenchen.de/103304/">Mapping the Third Republic. A Geographic Information System of France (1870–1940)</a> <span class="citation" data-cites="gay2020">(<a href="#ref-gay2020" role="doc-biblioref">Gay 2020</a>)</span>.</p></li>
+<li><p>Historical regional boundaries and transportation infraestructure in Europe since the mid-19th century <span class="citation" data-cites="marti2023">(<a href="#ref-marti2023" role="doc-biblioref">Martí-Henneberg 2023</a>)</span>.</p></li>
 </ul>
 <p>Likewise, different websites have collected lists of national historical GIS, as well as examples of projects using GIS tools, such as <a href="http://www.hgis.org.uk/resources.htm">The Historical GIS Research Network</a> or <a href="https://geospatialhistorian.wordpress.com/finding-data/">Geospatial Historian</a>.</p>
 <ul>
-<li><p><strong>Historical gazetteers</strong>. The project <a href="http://www.visionofbritain.org.uk/">A vision of Britain through time</a> has gathered around 2 million historical place names from the early 19th century onwards. <a href="http://d-scholarship.pitt.edu/44108/">The Digital Gazetteer of the Song Dynasty</a> (906-1276 CE) <span class="citation" data-cites="mostern2022">(<a href="#ref-mostern2022" role="doc-biblioref"><strong>mostern2022?</strong></a>)</span>. <a href="https://pleiades.stoa.org">Pleiades</a>, a community-built gazetteer of ancient places. Similarly, the project ESPAREL has extracted and geo-referenced the almost 20,000 population entities existing in the 1887 Spanish nomenclator and link them with their current and past counterparts <span class="citation" data-cites="esparel2022">(<a href="#ref-esparel2022" role="doc-biblioref"><strong>esparel2022?</strong></a>)</span>. The <a href="https://whgazetteer.org">World Historical Gazetteer</a> is a platform that hosts many of these initiatives geo-locating historical place names across the world.</p></li>
+<li><p><strong>Historical gazetteers</strong>. The project <a href="http://www.visionofbritain.org.uk/">A vision of Britain through time</a> has gathered around 2 million historical place names from the early 19th century onwards. <a href="http://d-scholarship.pitt.edu/44108/">The Digital Gazetteer of the Song Dynasty</a> (906-1276 CE) <span class="citation" data-cites="mostern2022">(<a href="#ref-mostern2022" role="doc-biblioref">Mostern and Meeks 2022</a>)</span>. <a href="https://pleiades.stoa.org">Pleiades</a>, a community-built gazetteer of ancient places. Similarly, the project ESPAREL has extracted and geo-referenced the almost 20,000 population entities existing in the 1887 Spanish nomenclator and link them with their current and past counterparts <span class="citation" data-cites="esparel2022">(<a href="#ref-esparel2022" role="doc-biblioref">Beltrán Tapia et al. 2022</a>)</span>. The <a href="https://whgazetteer.org">World Historical Gazetteer</a> is a platform that hosts many of these initiatives geo-locating historical place names across the world.</p></li>
 <li><p><a href="https://www.historicalclimatology.com/cliwoc.html">Historical Climatology</a></p></li>
-<li><p>Ships’ logbooks are a especially valuable source since their entries not only recorded the vessels’ geographical position (longitude and latitude), but also systematic meteorological information (and other events, such as whales seen or captured, etc.) daily or even several times a day <span class="citation" data-cites="smith2012 garcia2018 walker2024">(<a href="#ref-smith2012" role="doc-biblioref"><strong>smith2012?</strong></a>; <a href="#ref-garcia2018" role="doc-biblioref"><strong>garcia2018?</strong></a>; <a href="#ref-walker2024" role="doc-biblioref"><strong>walker2024?</strong></a>)</span>. See also the <a href="https://whalinghistory.org">Whaling History</a>, the <a href="https://www.reuters.com/graphics/CLIMATE-CHANGE-ICE-SHIPLOGS/0100B4QE2FC/">Weather Time Machine</a> or the <a href="https://www.oldweather.org">Old Weather</a> projects.</p></li>
-<li><p>The <a href="https://dataverse.harvard.edu/dataverse/hisdacus?q=&amp;types=dataverses%3Adatasets&amp;sort=dateSort&amp;order=desc&amp;page=1">Historical Settlement Data Compilation for the United States (HISDAC-US)</a> <span class="citation" data-cites="uhl2021 connor2020">(<a href="#ref-uhl2021" role="doc-biblioref"><strong>uhl2021?</strong></a>; <a href="#ref-connor2020" role="doc-biblioref"><strong>connor2020?</strong></a>)</span>. Historical gridded settlement layers derived from property records since 1810. These files count the number of built-up properties devoted to different uses (agricultural, commercial, industrial, residential, etc.) per grid cell and therefore allows tracking the evolution of urbanization and land Use use over time.</p></li>
+<li><p>Ships’ logbooks are a especially valuable source since their entries not only recorded the vessels’ geographical position (longitude and latitude), but also systematic meteorological information (and other events, such as whales seen or captured, etc.) daily or even several times a day <span class="citation" data-cites="smith2012 garcia2018 walker2024">(<a href="#ref-smith2012" role="doc-biblioref">Smith et al. 2012</a>; <a href="#ref-garcia2018" role="doc-biblioref">García-Herrera et al. 2018</a>; <a href="#ref-walker2024" role="doc-biblioref">Walker and Ummenhofer 2024</a>)</span>. See also the <a href="https://whalinghistory.org">Whaling History</a>, the <a href="https://www.reuters.com/graphics/CLIMATE-CHANGE-ICE-SHIPLOGS/0100B4QE2FC/">Weather Time Machine</a> or the <a href="https://www.oldweather.org">Old Weather</a> projects.</p></li>
+<li><p>The <a href="https://dataverse.harvard.edu/dataverse/hisdacus?q=&amp;types=dataverses%3Adatasets&amp;sort=dateSort&amp;order=desc&amp;page=1">Historical Settlement Data Compilation for the United States (HISDAC-US)</a> <span class="citation" data-cites="uhl2021 connor2020">(<a href="#ref-uhl2021" role="doc-biblioref">Uhl and Duan 2021</a>; <a href="#ref-connor2020" role="doc-biblioref">Connor et al. 2020</a>)</span>. Historical gridded settlement layers derived from property records since 1810. These files count the number of built-up properties devoted to different uses (agricultural, commercial, industrial, residential, etc.) per grid cell and therefore allows tracking the evolution of urbanization and land Use use over time.</p></li>
 </ul>
 <p>These are just some examples. A fine-grain online search, specifying the area, the period and the topic of interest may also produce the desired results. Moreover, plenty of research, either by public institutions or individual researchers, has also used GIS tools but has not made the underlying data public. Most maps published nowadays in books, academic journals, newspapers and websites make use of these tools and therefore are based on shape or raster files that can be shared and reproduced. Authors are usually happy to share their materials providing they are properly referenced, so contacting them is always advisable.</p>
 </section>
@@ -286,19 +263,24 @@ div.csl-indent {
 <li><p><a href="https://medialab.github.io/bhht-datascape/#about">A brief history of human time</a> <span class="citation" data-cites="laouenan2022">(<a href="#ref-laouenan2022" role="doc-biblioref">Laouenan et al. 2022</a>)</span>. This database includes information on 2.2 million notable individuals born between 3500BC and 2020 (5,500 years of human history) collected from Wikipedia and other secondary sources. As well as dates of birth and death, the data set includes place of birth and other features characterising these individuals (when available). As the authors document, Anglo-Saxon personalities are over-represented due to the bias naturally present in existing projects based on the English edition of Wikipedia. See also <span class="citation" data-cites="schich-etal2014">Schich et al. (<a href="#ref-schich-etal2014" role="doc-biblioref">2014</a>)</span> who used the dates of birth and death of a subsample of this data (150,000 notable individuals) to map the evolution of European cultural history during the last 2,000 years.</p></li>
 <li><p><a href="https://perso.uclouvain.be/david.delacroix/menushiny.html">Academich scholars and literati in Medieval and Early Modern Europe</a> <span class="citation" data-cites="delacroix2021">(<a href="#ref-delacroix2021" role="doc-biblioref">De La Croix, n.d.</a>)</span>. Relational database on around 83,000 scholars and literati active in European Academia between 1000 and 1800. As well as place and year of birth and details, it details to which institutions these individuals belonged (universities, scientific academies, etc.). See <span class="citation" data-cites="delacroix2025a">De La Croix, Scebba, and Zanardello (<a href="#ref-delacroix2025a" role="doc-biblioref">2025</a>)</span> and <span class="citation" data-cites="delacroix2025b">De La Croix and Morault (<a href="#ref-delacroix2025b" role="doc-biblioref">2025</a>)</span> for two applications using social network analysis.</p></li>
 </ul>
-<p>Again, a targeted online search may yield results specific to your interests. Although searching for area and period of study is always useful, many topics are also very well covered: population, education <span class="citation" data-cites="cappelli2023">(<a href="#ref-cappelli2023" role="doc-biblioref"><strong>cappelli2023?</strong></a>)</span>, social conflicts <span class="citation" data-cites="chambru2022">(<a href="#ref-chambru2022" role="doc-biblioref">Chambru and Maneuvrier-Hervieu 2022</a>)</span>, lighthouses <span class="citation" data-cites="bogart2022">(<a href="#ref-bogart2022" role="doc-biblioref"><strong>bogart2022?</strong></a>)</span>, sailing routes and wrecks (<a href="https://www.keynesfund.econ.cam.ac.uk/projects/lighthouses-economics-redivivus-analysis">here</a>), to mention only a few.</p>
+<p>Again, a targeted online search may yield results specific to your interests. Although searching for area and period of study is always useful, many topics are also very well covered: population, education <span class="citation" data-cites="cappelli2023">(<a href="#ref-cappelli2023" role="doc-biblioref">Cappelli et al. 2025</a>)</span>, social conflicts <span class="citation" data-cites="chambru2022">(<a href="#ref-chambru2022" role="doc-biblioref">Chambru and Maneuvrier-Hervieu 2022</a>)</span>, lighthouses <span class="citation" data-cites="bogart2022">(<a href="#ref-bogart2022" role="doc-biblioref">Bogart et al. 2022</a>)</span>, sailing routes and wrecks (<a href="https://www.keynesfund.econ.cam.ac.uk/projects/lighthouses-economics-redivivus-analysis">here</a>), to mention only a few.</p>
 <p>Another alternative is to rely on contemporary shapefiles. Physical features (i.e.&nbsp;rivers, coastlines, etc.) are not likely to have changed much, so you easily find appropriate GIS files online or any national agency. Likewise, many historical locations (i.e.&nbsp;settlements, regional entities, etc.) still exist and are contained in contemporary geo-referenced databases.</p>
 <p>Alternatively, spatial coordinates can be gathered from GPS receivers, online searches or google map itself. Opening Google Maps and clicking in any point provides this information. Notice though that google maps reports latitude first and longitude second, so the order is switched. This kind of information is, for instance, very important for recording archaeological locations.</p>
 </section>
 <section id="norwegian-data" class="level2">
 <h2 class="anchored" data-anchor-id="norwegian-data">Norwegian data</h2>
-<p>The <a href="https://kommunedatabasen.sikt.no">Kommunedatabasen</a> also has digitised a huge amount of historical information on municipalities (kommuner). You can request shapefiles with the (changing) municipal boundaries from 1880 onwards.</p>
-<p>Other additional sources can be found below:</p>
+<ul>
+<li><p><a href="https://www.geonorge.no/en">GeoNorge</a> is the place to go regarding map data and other location information in Norway.</p></li>
+<li><p>The <a href="https://kommunedatabasen.sikt.no">Kommunedatabasen</a> also has digitised a huge amount of historical information on municipalities (kommuner). You can request shapefiles with the (changing) municipal boundaries from 1880 onwards.</p></li>
+</ul>
 </section>
 <section id="miscellaneous" class="level2">
 <h2 class="anchored" data-anchor-id="miscellaneous">Miscellaneous</h2>
-<p>Those students with other research interests can choose their dataset on their own. The possibilities are endless. Here are just a few examples:</p>
-<p>As mentioned above, I encourage you to find your own dataset.</p>
+<p>Those students with other research interests can choose their data set on their own. The possibilities are endless. Here are just a few additional examples. Make sure that they provide spatial coordinates or that you can get them by other means (i.e.&nbsp;geocoding).</p>
+<ul>
+<li><a href="https://www.kaggle.com/datasets">Kaggle</a> or <a href="https://github.com/rfordatascience/tidytuesday?tab=readme-ov-file#datasets">TidyTuesday</a> gather a wide variety of data sets. See, for instance, the aerial bombing operations in <a href="https://www.kaggle.com/datasets/usaf/world-war-ii">World War II</a> or <a href="https://www.kaggle.com/datasets/usaf/vietnam-war-bombing-operations">Vietnam War</a>, or the <a href="https://www.kaggle.com/datasets/usamabuttar/significant-earthquakes">Significant earthquakes, 1900-Present</a>, among many others. You can also check <a href="https://www.data-is-plural.com/archive/">Data is Plural</a> for a curated list of other data sets, mostly contemporary.</li>
+</ul>
+<p>As mentioned above, I encourage you to find your own source of spatial data.</p>
 
 
 
@@ -311,8 +293,35 @@ Ahnert, Ruth, and Sebastian E. Ahnert. 2023. <em>Tudor Networks of Power</em>. O
 <div id="ref-tnp2023" class="csl-entry" role="listitem">
 Ahnert, Ruth, Sebastian E. Ahnert, Jose Cree, and Lotte Fikkers. 2023. <span>“Tudor Networks of Power - Correspondence Network Dataset.”</span> <em>Cliodynamics</em>. Apollo - University of Cambridge Repository. <a href="https://doi.org/10.17863/CAM.99562">https://doi.org/10.17863/CAM.99562</a>.
 </div>
+<div id="ref-esparel2022" class="csl-entry" role="listitem">
+Beltrán Tapia, Francisco J., Alfonso Díez Minguela, Víctor Fernández Modrego, Alicia Gómez Tello, Julio Martínez-Galarraga, and Daniel A. Tirado Fabregat. 2022. <span>“ESPAREL. A Look at the Relationship Between Population and Territory in Spain in Historical Perspective.”</span> <em>Documentos de Trabajo de La Asociación Española de Historia Económica</em> 2207.
+</div>
+<div id="ref-bogart2022" class="csl-entry" role="listitem">
+Bogart, Dan, Oliver Buxton Dunn, Eduard J. Alvarez-Palau, and Leigh Shaw-Taylor. 2022. <span>“Organizations and Efficiency in Public Services: The Case of English Lighthouses Revisited.”</span> <em>Economic Enquiry</em> 60 (2).
+</div>
+<div id="ref-cambon2021" class="csl-entry" role="listitem">
+Cambon, Jesse, Diego Hernangómez, Christopher Belanger, and Daniel Possenriede. 2021. <span>“Tidygeocoder: An r Package for Geocoding.”</span> <em>Journal of Open Source Software</em> 6 (65): 3544. <a href="https://doi.org/10.21105/joss.03544">https://doi.org/10.21105/joss.03544</a>.
+</div>
+<div id="ref-cappelli2023" class="csl-entry" role="listitem">
+Cappelli, Gabriele, Leonardo Ridolfi, Michelangelo Vasta, and Johannes Westberg. 2025. <span>“Human Capital in Europe, 1830s–1930s: A General Survey.”</span> <em>Journal of Economic Surveys</em> 39 (2): 453–88.
+</div>
+<div id="ref-carvalho2021" class="csl-entry" role="listitem">
+Carvalho, Rafael C., Blake Allan, David M. Kennedy, Chloe Leach, Stephan O’Brien, and Daniel Ierodiaconou. 2021. <span>“Quantifying Decadal Volumetric Changes Along Sandy Beaches Using Improved Historical Aerial Photographic Models and Contemporary Data.”</span> <em>Earth Surface Processes and Landforms</em> 46 (10): 1882–97.
+</div>
 <div id="ref-chambru2022" class="csl-entry" role="listitem">
 Chambru, Cédric, and Paul Maneuvrier-Hervieu. 2022. <span>“Introducing HiSCoD: A New Gateway for the Study of Historical Social Conflict.”</span> <em>Working Paper Series, Department of Economics, University of Zurich</em> 407.
+</div>
+<div id="ref-clifford2016" class="csl-entry" role="listitem">
+Clifford, Jim, Beatrice Alex, Colin M. Coates, Ewan Klein, and Andrew Watson. 2016. <span>“Geoparsing History: Locating Commodities in Ten Million Pages of Nineteenth-Century Sources.”</span> <em>Historical Methods: A Journal of Quantitative and Interdisciplinary History</em> 49 (3): 115—131.
+</div>
+<div id="ref-clifford2013" class="csl-entry" role="listitem">
+Clifford, Jim, Josh MacFadyen, and Daniel Macfarlane. 2013. <span>“Creating New Vector Layers in QGIS 2.0.”</span> https://doi.org/<a href="https://doi.org/10.46430/phen0034">https://doi.org/10.46430/phen0034</a>.
+</div>
+<div id="ref-combes2022" class="csl-entry" role="listitem">
+Combes, Pierre-Philippe, Laurent Gobillon, and Yanos Zylberberg. 2022. <span>“Urban Economics in a Historical Perspective: Recovering Data with Machine Learning.”</span> <em>Regional Science and Urban Economics</em> 94: 103711.
+</div>
+<div id="ref-connor2020" class="csl-entry" role="listitem">
+Connor, Dylan S., Myron P. Gutmann, Angela Cunningham, Kerri K. Clement, and Stefan Leyk. 2020. <span>“How Entrenched Is the Spatial Structure of Neighborhood Inequality? Evidence from the Integration of Census and Housing Data for Denver from 1940 to 2016.”</span> <em>Annals of the American Association of Geographers</em> 110 (4): 1022–39.
 </div>
 <div id="ref-delacroix2021" class="csl-entry" role="listitem">
 De La Croix, David. n.d. <span>“Scholars and Literati in European Academia Before 1800.”</span> <em>Repertorium Eruditorum Totius Europae 5:35–41</em>. <a href="https://doi.org/10.14428/rete.v5i0/global21">https://doi.org/10.14428/rete.v5i0/global21</a>.
@@ -323,247 +332,328 @@ De La Croix, David, and Pauline Morault. 2025. <span>“Winners and Losers from 
 <div id="ref-delacroix2025a" class="csl-entry" role="listitem">
 De La Croix, David, Rossana Scebba, and Chiara Zanardello. 2025. <span>“Flora, Cosmos, Salvatio: Pre-Modern Academic Institutions and the Spread of Ideas.”</span> <em>CEPR Discussion Papers Series</em> DP20569.
 </div>
+<div id="ref-donaldson2016" class="csl-entry" role="listitem">
+Donaldson, Dave, and Adam Storeygard. 2016. <span>“The View from Above: Applications of Satellite Data in Economics.”</span> <em>Journal of Economic Perspectives</em> 30 (4): 171–98.
+</div>
+<div id="ref-garcia2018" class="csl-entry" role="listitem">
+García-Herrera, Ricardo, David Barriopedro, David Gallego, Javier Mellado-Cano, Dennis Wheeler, and Clive Wilkinson. 2018. <span>“Understanding Weather and Climate of the Last 300 Years from Ships’ Logbooks.”</span> <em>WIREs Climate Change</em> e544. https://doi.org/<a href="https://doi.org/10.1002/wcc.544">https://doi.org/10.1002/wcc.544</a>.
+</div>
+<div id="ref-gay2020" class="csl-entry" role="listitem">
+Gay, Victor. 2020. <span>“Mapping the Third Republic. A Geographic Information System of France (1870–1940).”</span> <em>MPRA Working Paper Series</em> 103304.
+</div>
+<div id="ref-gregory2007" class="csl-entry" role="listitem">
+Gregory, Ian N., and Paul S. Ell. 2007. <span>“GIS and Its Role in Historical Research: An Introduction.”</span> In <em>Historical GIS: Technologies, Methodologies, and Scholarship</em>, edited by I. N. Gregory and P. S. Ell. Cambridge University Press.
+</div>
+<div id="ref-heblich2021" class="csl-entry" role="listitem">
+Heblich, Stephan, Alex Trew, and Yanos Zylberberg. 2021. <span>“East-Side Story: Historical Pollution and Persistent Neighborhood Sorting.”</span> <em>Journal of Political Economy</em> 219 (5): 1508–52.
+</div>
+<div id="ref-holterman2023" class="csl-entry" role="listitem">
+Holterman, Bart, and Angela Huang. 2023. <span>“Geospatial Methods and the Premodern Economy: Mapping the Institutional Landscapes of Northern Europe, 1350–1650.”</span> <em>Jahrbuch Für Wirtschaftsgeschichte / Economic History Yearbook</em> 64 (1): 179–212.
+</div>
+<div id="ref-hornbeck2017" class="csl-entry" role="listitem">
+Hornbeck, Richard, and Daniel Keniston. 2009. <span>“Creative Destruction: Barriers to Urban Growth and the Great Boston Fire of 1872.”</span> <em>American Economic Review</em> 107 (6): 1365–98.
+</div>
+<div id="ref-hosseini2021" class="csl-entry" role="listitem">
+Hosseini, Kasra, Daniel C. S. Wilson, Kaspar Beelen, and Katherine McDonough. 2021. <span>“MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale.”</span> <em>arXiv</em> 2111.15592. <a href="https://doi.org/10.48550/arXiv.2111.15592">https://doi.org/10.48550/arXiv.2111.15592</a>.
+</div>
 <div id="ref-laouenan2022" class="csl-entry" role="listitem">
 Laouenan, Morgane, Palaash Bhargava, Jean-Benoît Eyméoud, Olivier Gergaud, Guillaume Plique, and Etienne Wasmer. 2022. <span>“A Cross-Verified Database of Notable People, 3500BC-2018AD.”</span> <em>Scientific Data</em> 9 (1): 290. <a href="https://doi.org/10.1038/s41597-022-01369-4">https://doi.org/10.1038/s41597-022-01369-4</a>.
+</div>
+<div id="ref-litvine2024" class="csl-entry" role="listitem">
+Litvine, Alexis D., Arthur Starzec, Rehmana Younis, Yannick Faula, Mickaël Coustaty, Leigh Shaw-Taylor, and Véronique Églin. 2024. <span>“Built-up Areas of Nineteenth-Century Britain. An Integrated Methodology for Extracting High-Resolution Urban Footprints from Historical Maps.”</span> <em>Historical Methods: A Journal of Quantitative and Interdisciplinary History</em> 57 (1): 1–19. <a href="https://doi.org/10.1080/01615440.2024.2324163">https://doi.org/10.1080/01615440.2024.2324163</a>.
+</div>
+<div id="ref-litvine2023" class="csl-entry" role="listitem">
+Litvine, Alexis, Thomas Thévenin, Isabelle Séguy, and Arthur Starzec. 2023. <span>“French Historical GIS, 1700-2020. Administrative Units, Populations, Transports, Economy.”</span> <em>Zenodo</em>. https://doi.org/<a href="https://doi.org/10.5281/zenodo.3727274">https://doi.org/10.5281/zenodo.3727274</a>.
+</div>
+<div id="ref-llena2023" class="csl-entry" role="listitem">
+Llena, Manel, and Damià Vericat. 2023. <span>“Using Archival Aerial Imagery to Study Landscape Properties and Dynamics.”</span> In <em>Creative Ways to Apply Historical GIS. Promoting Research and Teaching about Europe</em>, edited by Jordi Martí-Henneberg, 87–96. Springer.
+</div>
+<div id="ref-marti2023" class="csl-entry" role="listitem">
+Martí-Henneberg, Jordi. 2023. <em>Creative Ways to Apply Historical GIS</em>. Springer.
+</div>
+<div id="ref-mcdonough2024" class="csl-entry" role="listitem">
+McDonough, Katherine. 2024. <span>“Maps as Data.”</span> In <em>Computational Humanities</em>, edited by Lauren Tilton, David Mimno, and Jessica Marie Johnson, 99–126. University of Minnesota Press.
+</div>
+<div id="ref-midgley2017" class="csl-entry" role="listitem">
+Midgley, Nicholas G., and Toby N. Tonkin. 2017. <span>“Geomorphology Reconstruction of Former Glacier Surface Topography from Archive Oblique Aerial Images.”</span> <em>Geomorphology</em> 282: 18–26.
+</div>
+<div id="ref-moraga2023" class="csl-entry" role="listitem">
+Moraga, Paula. 2023. <em>Spatial Statistics for Data Science: Theory and Practice with r</em>. Chapman &amp; Hall/CRC.
+</div>
+<div id="ref-mostern2022" class="csl-entry" role="listitem">
+Mostern, Ruth, and Elijah Meeks. 2022. <span>“The Digital Gazetteer of the Song Dynasty.”</span> <a href="http://d-scholarship.pitt.edu/44108/">http://d-scholarship.pitt.edu/44108/</a>.
+</div>
+<div id="ref-munteanu2024" class="csl-entry" role="listitem">
+Munteanu, Catalina, Benjamin M. Kraemer, Henry H. Hansen, Sofia Miguel, E. J. Milner-Gulland, Mihai Nita, Igor Ogashawara, et al. 2024. <span>“The Potential of Historical Spy-Satellite Imagery to Support Research in Ecology and Conservation.”</span> <em>BioScience</em> 74 (3): 159–68. <a href="https://doi.org/10.1093/biosci/biae002">https://doi.org/10.1093/biosci/biae002</a>.
 </div>
 <div id="ref-petram2024" class="csl-entry" role="listitem">
 Petram, Lodewijk, Marijn Koolen, Melvin Wevers, and Jelle van Lottum. 2024. <span>“Charting Lives and Careers: Enriched Data about the Dutch East India Company’s Eighteenth-Century European Workforce.”</span> <em>Journal of Open Humanities Data</em> 10. <a href="https://doi.org/10.5334/johd.210">https://doi.org/10.5334/johd.210</a>.
 </div>
+<div id="ref-pinol2018" class="csl-entry" role="listitem">
+Pinol, Jean-Luc. 2018. <span>“Geodetic Data and Spatial Photography.”</span> In <em>The Routledge Companion to Spatial History</em>, edited by Ian Gregory, Don DeBats, and Don Lafreniere, 250–70. Routledge.
+</div>
+<div id="ref-redding2024" class="csl-entry" role="listitem">
+Redding, Stephen, and Daniel Sturm. 2024. <span>“Neighborhood Effects: Evidence from Wartime Destruction in London.”</span> <em>NBER Working Paper</em> 32333.
+</div>
 <div id="ref-schich-etal2014" class="csl-entry" role="listitem">
 Schich, Maximilian, Chaoming Song, Yong-Yeol Ahn, Alexander Mirsky, Mauro Martino, Albert-László Barabási, and Dirk Helbing. 2014. <span>“A Network Framework of Cultural History.”</span> <em>Science</em> 345 (6196): 558–62.
 </div>
+<div id="ref-siodla2015" class="csl-entry" role="listitem">
+Siodla, James. 2015. <span>“Razing San Francisco: The 1906 Disaster as a Natural Experiment in Urban Redevelopment.”</span> <em>Journal of Urban Economics</em> 89: 48–61.
+</div>
+<div id="ref-smith2012" class="csl-entry" role="listitem">
+Smith, T. D., R. R. Reeves, E. A. Josephson, and J. N. Lund. 2012. <span>“Spatial and Seasonal Distribution of American Whaling and Whales in the Age of Sail.”</span> <em>PLoS ONE</em> 7 (4): e34905. <a href="https://doi.org/10.1371/journal.pone.0034905">https://doi.org/10.1371/journal.pone.0034905</a>.
+</div>
+<div id="ref-sylvester2012" class="csl-entry" role="listitem">
+Sylvester, Kenneth M., and Eric. S. A. Rupley. 2012. <span>“Revising the Dust Bowl: High Above the Kansas Grasslands.”</span> <em>Environmental History</em> 17 (3): 603–33. <a href="https://doi.org/10.1093/envhis/ems047">https://doi.org/10.1093/envhis/ems047</a>.
+</div>
+<div id="ref-uhl2021" class="csl-entry" role="listitem">
+Uhl, Johannes H., and Weiwei Duan. 2021. <span>“Automating Information Extraction from Large Historical Topographic Map Archives: New Opportunities and Challenges.”</span> In <em>Handbook of Big Geospatial Data</em>, edited by Martin Werner and Yao-Yi Chiang, 509–22. Springer.
+</div>
+<div id="ref-walker2024" class="csl-entry" role="listitem">
+Walker, Timothy D., and Caroline C. Ummenhofer. 2024. <span>“Extracting Global Maritime Weather Data from New England Whaling and Portuguese Navy Logbooks (1740-1960).”</span> <em>Mainsheet</em> 1: 108–23.
+</div>
+<div id="ref-wuepper2025" class="csl-entry" role="listitem">
+Wuepper, David, Wyclife Agumba Oluoch, and Hadi Hadi. 2025. <span>“Satellite Data in Agricultural and Environmental Economics: Theory and Practice.”</span> <em>Agricultural Economics</em> 56 (3): 493–511.
+</div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -571,185 +661,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 

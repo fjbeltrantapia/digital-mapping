@@ -6,23 +6,15 @@ Below are the instructions to prepare the session in advance:
 
 **1. Install R and RStudio**. **R** is a (free) statistical software and **RStudio** is an integrated interface that makes working with R easier. Bear in mind that you have to download and install both softwares: R and RStudio. The version you install depends on whether you are using Windows or Mac. Here is a [link](https://posit.co/download/rstudio-desktop/) to access them.
 
-**2. Create a dedicated folder to this session in your computer.** Name it `mapping`. 
+**2. Install QGIS**. Although we will mostly be working with R, we will need QGIS for digitising spatial features manually (from historical maps). **QGIS** is a geographic information system (GIS) software, which is also free and open-source. You can find the instructions to download and install QGIS [here](https://www.qgis.org).
 
-**3. Download the following materials**. Store these files in separate folders (named `data` and `scripts`, respectively) within the folder `mapping`:
+**3. Download the course materials** (available in Blackboard). These include the [datasets]{.underline} we will be working with and the [R scripts]{.underline} containing the code to map the information they contain (or extract other spatial information). Create a dedicated folder to this session in your computer. Name it `mapping` and store these files in separate folders (named `data` and `scripts`, respectively) within the folder `mapping`.
 
-  * The [datasets]{.underline} we will be working with: [here](data/paisley-data.xlsx) and <a href="data/state-of-the-union-texts.csv" download>here</a>.
-    
-  * The [R scripts]{.underline} containing the code to extract (some) information from them: <a href="paisley.R" download>here</a> and <a href="speeches.R" download>here</a>.
+**5. Get familiar with R and RStudio** by opening **RStudio** and following the instructions in the [Intro to R](get-r.html) section.  
   
-**4. Get familiar with R and RStudio** by opening **RStudio** and following the instructions in the [Intro to R](get-r.html) section.  
-  
-**5. Read the following texts in advance:** 
+**6. Read the blogposts and online visualisations in advance listed [here](coursework.html)**. 
 
-  - The background information for the two [case-studies]{.underline} we will be exploring: [The Paisley Prisoners' Dataset](backg-paisley.html) and [The State of the Union Presidential Speeches](backg-speeches.html).
-
-  - The article [Quantifying history]{.underline} (available in Blackboard). This text outlines the advantages and disadvantages of using quantitative and computational methods in history. We will be discussing it at the beginning of the first session.
-
-**6. Do not forget to bring your laptop to the session (or work in pairs)**
+**7. Do not forget to bring your laptop to the session (or work in pairs)**.
 
 \vspace{1em}
 
