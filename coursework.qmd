@@ -2,7 +2,7 @@
 title: "Coursework"
 ---
 
-Student attendance is compulsory. Students are expected to participate actively in each session and replicate the examples implemented in class. Grading will be based on active participation and a final take-home exam.
+Student attendance is compulsory. Students are expected to participate actively in each session and replicate the examples implemented in class. In addition, students will have time to explore how the tools covered here can be applied to their own materials. Grading will be based on active participation and a final take-home exam.
 
 The **final assignment** consists of a take-home exam in the form of an essay. The course cover many tools, so choose those that you found most useful for your own research. Write a short essay where you show how you implement these tools to your own spatial data (or to one of the sources provided [here](other-data.html)). Take this assignment as an opportunity to work on your topic from a spatial perspective and get feedback on it.
 
