@@ -16,7 +16,7 @@ For inspiration, see the following [**blogposts**]{.underline}:
 
 - [Postal geography and the Golden West](https://cblevins.github.io/posts/postal-geography-and-the-golden-west/)
 
-- [Mapping the State of the Union](https://www.theatlantic.com/politics/archive/2015/01/mapping-the-state-of-the-union/384576/))
+- [Mapping the State of the Union](https://www.theatlantic.com/politics/archive/2015/01/mapping-the-state-of-the-union/384576/)
 
 - [A better map of slavery in 1860](https://lincolnmullen.com/blog/a-better-map-of-slavery-in-1860/)
 
