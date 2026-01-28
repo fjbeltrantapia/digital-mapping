@@ -10,7 +10,7 @@ Instructor: [Francisco J. Beltrán Tapia](https://fjbeltrantapia.github.io)
 
 \vspace{1em}
 
-This course, offered by the [Faculty of Humanities](https://www.ntnu.edu/hf) at the [Norwegian University of Science and Technology](https://www.ntnu.edu), provides a practical introduction on how to apply Geographic Information Systems and its associated methods in the humanities and the social sciences.
+This course, offered by the [Faculty of Humanities](https://www.ntnu.edu/hf) at the [Norwegian University of Science and Technology](https://www.ntnu.edu), provides a practical introduction on how to apply Geographic Information Systems and its associated methods in the humanities and the social sciences. While NTNU students should enroll via [StudentWeb](https://i.ntnu.no/wiki/-/wiki/English/Student+Web), candidates from other universities should apply [here](https://www.ntnu.edu/studies/researchcourses).
 
 ::: {.column-margin}  
 ![The cholera epidemic in Soho (London), 1854 ([source](https://geodacenter.github.io/data-and-lab/data/snow_documentation.pdf)).](images/soho.png){width=100% height=100%} 

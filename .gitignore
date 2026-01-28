@@ -7,3 +7,4 @@
 /.quarto/
 
 course-materials/
+**/*.quarto_ipynb
