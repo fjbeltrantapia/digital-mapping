@@ -30,7 +30,7 @@ website:
         #href: backg-tnp.qmd    
     - text: "Coursework"
       href: coursework.qmd  
-    - text: "Other sources"
+    - text: "Spatial data"
       href: other-data.qmd
     - text: "Further readings"
       href: further-readings.qmd  
@@ -54,6 +54,7 @@ website:
           - text: "2.2. Adding XY coordinates"
           - text: "2.3. Geo-coding"
           - text: "2.4. Digitising historical maps"
+            href: qgis-digitising.qmd 
       - section: "3. Spatial analysis"
         contents:
           - text: "3.1. Density (heat) maps"

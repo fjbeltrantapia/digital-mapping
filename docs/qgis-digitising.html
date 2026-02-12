@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Case-study 1: The Paisley House of Correction Dataset – Digital mapping for the humanities and the social sciences - HIST8872</title>
+<title>Digitising old maps with QGIS – Digital mapping for the humanities and the social sciences - HIST8872</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ div.csl-indent {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar docked nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -113,7 +113,7 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> <i class="bi bi-fa-home" role="img">
+    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-fa-home" role="img">
 </i> 
 <span class="menu-text">Overview</span></a>
   </li>  
@@ -145,31 +145,145 @@ div.csl-indent {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">2. Creating spatial features</li><li class="breadcrumb-item"><a href="./qgis-digitising.html">2.4. Digitising historical maps</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contents</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">1. Digital mapping</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">1.1. Polygons</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">1.2. Points</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">1.3. Pixels</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">1.4. Coordinate Reference Systems</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">2. Creating spatial features</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">2.1. Existing GIS files</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">2.2. Adding XY coordinates</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">2.3. Geo-coding</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./qgis-digitising.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2.4. Digitising historical maps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">3. Spatial analysis</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">3.1. Density (heat) maps</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">3.2. Spatial correlation</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">4. Geo-computation</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">4.1. Distances</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">4.2 Spatial joins</span>
+  </li>
+          <li class="sidebar-item">
+ <span class="menu-text">4.3 Zonal statistics</span>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#further-references" id="toc-further-references" class="nav-link active" data-scroll-target="#further-references">Further references</a></li>
+  <li><a href="#geo-referencing-images" id="toc-geo-referencing-images" class="nav-link active" data-scroll-target="#geo-referencing-images">Geo-referencing images</a></li>
+  <li><a href="#digitising-spatial-features" id="toc-digitising-spatial-features" class="nav-link" data-scroll-target="#digitising-spatial-features">Digitising spatial features</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">2. Creating spatial features</li><li class="breadcrumb-item"><a href="./qgis-digitising.html">2.4. Digitising historical maps</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Case-study 1: The Paisley House of Correction Dataset</h1>
+<h1 class="title">Digitising old maps with QGIS</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -181,101 +295,126 @@ div.csl-indent {
 </header>
 
 
-<p>The fist case-study deals with the admission records from the Paisley prison, an institution located in a village near Glasgow (The Scottish National Archives). Kept in the National Archives of Scotland, these registers provide individual information on those prisoners who were admitted into this institution between 1841 and 1883.</p>
-<p>For an illustration on how this type of source looks like, see the register included below of John Hearn, a 12-year old convicted in 1873 for stealing 11 pieces of leather who was sentenced to one month of hard labour. Interestingly, prison records provide info on both males and females, a feature that is relatively uncommon for this period (when most of the height data come from military conscripts).</p>
-<div id="fig-john" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-john-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<img src="images/john-hearn.png" style="width:50.0%;height:50.0%" class="figure-img">
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-john-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Admission register, H.M. Prison Wandsworth (June 14, 1873).
-</figcaption>
+<p>In this session, we will digitise the buildings contained in this map of Trondheim from 1916 (you have it in the course materials).</p>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/trd-1916.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
 </figure>
 </div>
-<p>The previous picture comes from the <a href="https://discovery.nationalarchives.gov.uk/details/r/d0cbdc1e-f297-4488-9acf-1da291f28f76">H.M. Prison Wandsworth</a>, near London. The Paisley records are not as fancy. <a href="#fig-source" class="quarto-xref">Figure&nbsp;2</a> below shows a sample of the original source. While each column records different pieces of information (case number, date of admission, name, etc.), each row refers to each inmate in the data set. The data set was originally collected by Hamish Maxwell-Stewart, James Bradley and Tamsin O’Connor who systematically sample every fourth double page of all registers, resulting in a total of 13,879 observations. For practical reasons, we will rely on a subset of the full data set, containing a thousand prisoners.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> This source presents information in a very structured form, that can be easily transferred to a digital version.</p>
-<div id="fig-source" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-source-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/paisley1.png" class="img-fluid figure-img"></p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/paisley2.png" class="img-fluid figure-img"></p>
-</div>
-</div>
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/paisley3.png" class="img-fluid figure-img"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/paisley4.png" class="img-fluid figure-img"></p>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Admission Register, Paisley Prison, National Archives of Scotland, Paisley 1841-1883 HH21/32/1, HH21/39/1-9.
-</figcaption>
-</figure>
-</div>
-<p>As well as the case number, the source reports name, sex, age, place (and country) of birth, place of residence, height, weight, occupation and literacy level, etc. As well demographic and socio-economic information, the registers also include the offence committed and the sentence they were punished with (see image below). The education, occupations, and types of crimes (mostly petty crimes) suggest that these prisoners were drawn from the low working classes, which constituted a large proportion of the full population at the time. Comparing the prisoners’ registers with those of the 1861 population census also confirms that they were “ordinary if vulnerable workers” <span class="citation" data-cites="meredith2015">(<a href="#ref-meredith2015" role="doc-biblioref">Meredith and Oxley 2015, 209</a>)</span>.</p>
-<p>Inputing the raw data into an Excel spreadsheet results in <a href="#fig-excel" class="quarto-xref">Figure&nbsp;3</a> below. Each column, known as <strong>field</strong> or <strong>variable</strong> presents a piece of information. As well as the case number (<em>casen</em>) and the date of admission (information that is split in two fields: <em>month</em> and <em>year</em>), the source records several pieces of information about these inmates, such <em>name</em> and <em>surname</em>, <em>sex</em>, <em>age</em>, place of birth (<em>born</em>) and country of birth (<em>countryb</em>), the place where the were living before being imprisoned (<em>reside</em>), height (in <em>feet</em> and <em>inches</em>) and <em>weight</em>, occupation (<em>occup</em>) and whether they were <em>employed</em> or not. It also reports their <em>literacy</em>, the <em>marks</em> that were visible in their bodies, the <em>offence</em> they committed and the <em>sentence</em> they received. While the first row displays the name of these variables, the remaining rows are devoted to each individual in the dataset.</p>
-<div id="fig-excel" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-excel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<img src="images/paisley-excel.png" style="width:100.0%;height:100.0%" class="figure-img">
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-excel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Digital version of the Paisley data (Excel file).
-</figcaption>
-</figure>
-</div>
-<p>Who were these prisoners? Where they were coming from? Did prisoners’ occupations differ significantly from the rest of the population? What about literacy rates? Did men and women commit different crimes? Did judges treat everyone equally or did particular groups suffer harsher sentences? What explains the variation in stature and weights observed across prisoners? How did theses dimensions change during the period? The range of historical questions that this source can address is almost endless. Sarah Horrell, David Meredith and Deborah Oxley have relied on this information to significantly contribute to our understanding of 19th-century British society, especially regarding the biological living standards of the working classes and the gender dynamics that drove the allocation of resources within these families [<span class="citation" data-cites="horrell2013">Horrell and Oxley (<a href="#ref-horrell2013" role="doc-biblioref">2013</a>)</span>; <span class="citation" data-cites="meredith2015">Meredith and Oxley (<a href="#ref-meredith2015" role="doc-biblioref">2015</a>)</span>).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> We strongly encourage reading those pieces to get to know more about the source and its possibilities. Bear in mind that, for practical reasons, we will rely on a subset of the full data set, containing a thousand prisoners.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>This type of source allows exploring many historical questions:</p>
+<p>Digitising old maps (or other types of images) involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile).</p>
+<p>Although this process can be done using R, it is more intuitive using specific GIS software such as <a href="https://qgis.org">QGIS</a> or <a href="https://arcgis.com/index.html">ArcGIS</a>. The <a href="https://programminghistorian.org/en/lessons/vector-layers-qgis">Programming Historian</a> and the <a href="https://geospatialhistorian.wordpress.com">Geospatial Historian</a> offer great tutorials both in QGIS and ArcGIS <span class="citation" data-cites="clifford2013 gregory2007">(<a href="#ref-clifford2013" role="doc-biblioref">Clifford, MacFadyen, and Macfarlane 2013</a>; see also <a href="#ref-gregory2007" role="doc-biblioref">Gregory and Ell 2007</a>)</span>.</p>
+<p>Here, we will be using <strong>QGIS</strong>, a geographic information system (GIS) software, which is free and open-source. This type of GIS application consists of a graphical user interface that can be manipulated using menus and toolbars, as well as dragging shape or raster files into the main window. It is therefore a more intuitive way of interacting with spatial object. You can find the instructions to download and install QGIS <a href="https://www.qgis.org">here</a>.</p>
+<section id="geo-referencing-images" class="level3">
+<h3 class="anchored" data-anchor-id="geo-referencing-images">Geo-referencing images</h3>
+<p>We will do it step by step.</p>
 <ul>
-<li><p>How did the biological living standard of living change during the period?</p></li>
-<li><p>What explains the variation in stature observed across prisoners?</p></li>
-<li><p>Did prisoners’ occupations differ significantly from the rest of the population?</p></li>
-<li><p>What about literacy rates?</p></li>
-<li><p>Did men and women commit different crimes?</p></li>
-<li><p>Did judges treat everyone equally or did particular groups suffer harsher sentences?</p></li>
-<li><p>…</p></li>
+<li>Import the reference layer that will help us geo-referencing the image. This layer can be an existing shapefile containing some features that are easily recognizable (e.g.&nbsp;rivers, boundaries, etc.) or a general base map. Here, we can use the shapefile “Elv_Hovedelv.shp”, which is part of the course materials, and/or a base map. The latter can be access through the menu <em>Web</em> / <em>QMS</em> / <em>OSM</em> / <em>OSM Standard</em> (you will need to first install the corresponding plugin: <em>Plugins</em> / <em>Manage and Install Plugins</em>).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The figure below shows both in the area around Trondheim: the thick blue line represents the main rivers contained in the shapefile and the rest is the <em>OSM Standard</em> base map.</li>
 </ul>
-<p>Sarah Horrell, David Meredith and Deborah Oxley have relied on this information to significantly contribute to our understanding of 19th-century British society, especially regarding the living standards of the working classes and gender dynamics that drove the allocation of resources within these families <span class="citation" data-cites="horrell2013 meredith2015">(<a href="#ref-horrell2013" role="doc-biblioref">Horrell and Oxley 2013</a>; <a href="#ref-meredith2015" role="doc-biblioref">Meredith and Oxley 2015</a>)</span>. In a seminal article, Sarah Horrell and Deborah Oxley had previously addressed these issues using similar registers from the Wandsworth prison, near London <span class="citation" data-cites="horrell2009">(<a href="#ref-horrell2009" role="doc-biblioref">Horrell, Meredith, and Oxley 2009</a>)</span>. Those who are interested in knowing more about the source and its possibilities are encouraged to read those articles.</p>
-<div style="page-break-after: always;"></div>
-<section id="further-references" class="level3">
-<h3 class="anchored" data-anchor-id="further-references">Further references</h3>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-horrell2009" class="csl-entry" role="listitem">
-Horrell, Sarah, David Meredith, and Deborah Oxley. 2009. <span>“Measuring Misery: <span>Body</span> Mass, Ageing and Gender Inequality in <span>Victorian</span> <span>London</span>.”</span> <em>Explorations in Economic History</em> 46: 93–119.
-</div>
-<div id="ref-horrell2013" class="csl-entry" role="listitem">
-Horrell, Sarah, and Deborah Oxley. 2013. <span>“Bargaining for Basics? <span>Inferring</span> Decision Making in Nineteenth Century <span>British</span> Households from Expenditure, Diet, Stature, and Death.”</span> <em>European Review of Economic History</em> 17: 147–70.
-</div>
-<div id="ref-meredith2015" class="csl-entry" role="listitem">
-Meredith, David, and Deborah Oxley. 2015. <span>“Blood and Bone: <span>Body</span> Mass, Gender and Health Inequality in Nineteenth-Century British Families.”</span> <em>The History of the Family</em> 20 (2): 204–30.
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/web-osm.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
 </div>
 </div>
+<ul>
+<li><p>Open <em>Georeferencer</em> tool. You can find it in the <em>Layer</em> menu at the top (or in <em>Raster</em> menu in previous QGIS versions).</p></li>
+<li><p>Once the <em>Georeferencer</em> window pops up, you can <em>Open raster</em>, which refers to the scanned image, the old map of Trondheim we are geo-referencing here.</p></li>
+</ul>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/georef-open-raster.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<ul>
+<li>The next step involves the actual process of georeferencing, that is, providing real spatial coordinates to a regular image. This involves using the reference layers (e.g.&nbsp;the rivers or the base map) to indicate the GIS software where the image should be placed in space. In practical terms, this implies clicking <em>Find/add Ground Control Points</em> (GCPs), either as coordinates or, more easily, <em>From Map Canvas</em>, that is linking them to landmarks in the reference layer. Notice, that we first click on the scanned map. This opens up a window to <em>Enter Map Coordinates</em> (notice that this might often be hidden). After indicating that you are using the map canvas to provide the spatial coordinates, you do so by clicking in the appropriate location. Do not forget to click “OK”: coordinates will then populate the corresponding. Window.</li>
+</ul>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/add-control-points.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<p>Repeat this process at least 3/4 times to better anchor the image where it should be. Old maps can be heavily distorted in many ways, so the more CGPs, the better. You should also open the <em>Transformations settings</em> to define the parameters that will guide geo-referencing the image to its hypothetical location. As shown below, this implies setting a few things. Firstly, you need to indicate which algorithm will be applied to process the geometric transformation function to map coordinates from the image space into real-world coordinates: linear or polynomial.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Secondly, you have to set the Coordinate Reference System (CRS) that will be define the spatial properties attached to the image. A quick google search indicates that the proper one for Trondheim is “ETRS89-NOR / UTM zone 32N” (EPSG:25832), so we choose that one. Lastly, this process will create a new file, so make sure to select the folder you want to save it to.</p>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/transformation-settings.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<ul>
+<li>Once you have defined the <em>Transformation settings</em> and finished adding CGPs to the scanned map, you can click <em>Start Georeferencing</em>. This will apply the geometric transformation and locate the image into the hypothetic location in real-world coordinates based on the input provided in the previous step. As mentioned above, the output will be a new version of the raw file. You can check whether the georeferencing is actually a good match by comparing it to the reference layers. This is easier if you can set the transparency of the other layers (and/or the order of the layers) to check how the results look like, that is, whether the image overlaps with the layers. Below, you can see the one created for this example, which does a relatively a good job.</li>
+</ul>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/georef-result.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="digitising-spatial-features" class="level3">
+<h3 class="anchored" data-anchor-id="digitising-spatial-features">Digitising spatial features</h3>
+<p>Once we have the image geo-referenced, we can use it to digitase the features we are interested in, regardless they are buildings, roads, forest area, etc.</p>
+<p>First, make sure that the <em>Digitizing toolbar</em> is enabled. Right-click on the toolbar to have access to all the tools that are available, so you can activate it. Given that the reference layers we used in the previous step (e.g.&nbsp;the river and the OSM base map) are no longer necessary we can remove it from the layer panel, so everything is a bit tidyier.</p>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/digit-toolbar.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<p>Secondly, create a <em>New Shapefile layer</em>. Clicking in the corresponding icon will open up a new window where you can define how this spatial object will look like. Make sure that you name appropriately and store it in a particular folder, define its type, either points, lines or polygons and set an adequate Coordinate Reference System (CRS). Here, we will be naming this layer “buildings”, store it in one of the folders within the “course-material”, indicate that it is a polygon shapefile and set the CRS to the one most adequate for the Trondheim area (see above). By default, this layer will have one field (column) named <em>id</em> where you will be able to identify the features you will be digitising (buildings). Feel free to add more fields, either qualitative or numerical, if you think is necessary (<em>name</em>, <em>type</em>, etc.).<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/digit-new-layer.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<p>You are now read to start creating your polygons (or dots or lines depending on the type of shapefile you are creating). In order to do so, click “Toggle editing” (the pencil icon) plus “Add polygon feature”. This will allow you to draw each vertex by left-clicking. You will see how you polygon is forming as you keep adding vertices. When you are don, right-click to finish. This will open up a new window where you can fill in the feature attributes that help defining each of the features you will be creating (<em>id</em>, <em>name</em>, etc.).</p>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/digit-features.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<p>Now you have successfully created the first feature. Repeat the process as many times as you wish, basically until you digitise all the features you are interested in. Here we only create three polygons for illustrative purposes. As you will notice, everytime you add a new polygon, the <em>attribute table</em> gets updated with a new row (your observations).</p>
+<div class="figure-content">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/georef/digit-att-table.png" class="quarto-figure quarto-figure-center figure-img" style="width:100.0%;height:100.0%"></p>
+</figure>
+</div>
+</div>
+<p>And that’s it. Make sure you “Save layer edits”, so your finalised creating the spatial object which will be saved in your working directory and will be available for your next steps in the research proces. You can obviously save your work, your shapefile, and continue editing it at a later point.</p>
+<p>This all refers to creating shapefiles from scratch. You can also rely on existing shapefiles and edit them accordingly to your needs. There are probably a contemporary shapefile with all the buildings in Trondheim. You could start with that one and use the historical map to delete and/or modify the features (buildings) that do not conform with what the 1916 map indicates. The <em>Advanced Digitizing Toolbar</em> will allow you to perform different tricks, such as splitting or merging existing polygons.</p>
+
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-clifford2013" class="csl-entry" role="listitem">
+Clifford, Jim, Josh MacFadyen, and Daniel Macfarlane. 2013. <span>“Creating New Vector Layers in QGIS 2.0.”</span> https://doi.org/<a href="https://doi.org/10.46430/phen0034">https://doi.org/10.46430/phen0034</a>.
+</div>
+<div id="ref-gregory2007" class="csl-entry" role="listitem">
+Gregory, Ian N., and Paul S. Ell. 2007. <span>“GIS and Its Role in Historical Research: An Introduction.”</span> In <em>Historical GIS: Technologies, Methodologies, and Scholarship</em>, edited by I. N. Gregory and P. S. Ell. Cambridge University Press.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>I am extremely thankful to Deborah Oxley and Hamish Maxwell-Stewart for kindly sharing this material. I am especially indebted to Deb whose course materials I inherited when I first started teaching a similar course at the University of Oxford in 2012.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>In a seminal paper, Sarah Horrell and Deborah Oxley had previously addressed these issues using similar registers from the Wandsworth prison, near London <span class="citation" data-cites="horrell2009">(<a href="#ref-horrell2009" role="doc-biblioref">Horrell, Meredith, and Oxley 2009</a>)</span>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>We are extremely grateful to Deborah Oxley and Hamish Maxwell-Stewart for kindly sharing the Paisley dataset.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Find and Install the <em>QuickMapServices</em>. Once installed, it will be available in the menu <em>Web</em> as mentioned in the main text. There are other base maps available that you could use.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The number of ground control points (GCPs) you need depends directly on the number of parameters in the transformation model you choose. A higher-order polynomial needs more GCPs, which helps modelling more distorted images (old maps). This kind of flexibility is not always better and a polynomial 1 with 3 control points might be good enough if the cartographic image is sufficiently precised (more complex transformations may overfit local noise).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Do not forget to click “Add to field list” to confirm this. This is in any case the type of information you will have somewhere else and that you will want to match with the shapefile you are creating.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

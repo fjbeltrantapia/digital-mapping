@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,14 +67,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-927cc4023c64fc8e79cdc28ed271ad53.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7880cef56e955c5515e49ec1267627d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,6 +115,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Digital mapping for the humanities and the social sciences - HIST8872</span>
     </a>
@@ -145,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./other-data.html"> 
-<span class="menu-text">Other sources</span></a>
+<span class="menu-text">Spatial data</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./further-readings.html"> 
@@ -223,7 +226,7 @@ Figure&nbsp;1: RStudio Interface.
 <h2 class="anchored" data-anchor-id="setting-up-the-stage">Setting up the stage</h2>
 <p>Given that R needs some basic information regarding which folder in our computer (or the cloud) we are working from and which set of tools we are going to use, scripts usually start in a similar way. The code below includes some useful preparatory commands. You can copy and paste it in your own script.</p>
 <div class="cell" data-evaluation="false">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start afresh</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start afresh</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>()) <span class="co"># Clear de "Global Environment"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set working directory</span></span>
@@ -235,7 +238,7 @@ Figure&nbsp;1: RStudio Interface.
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notice that the symbol <code>#</code> allows creating “comments” (the characters turn green). R does not “read” these lines when implementing the code, so they can be used to both better structure our scripts and comment the code itself.</p>
 <p>A couple of further clarifications are though in order. Firstly, it is often difficult to type the correct directory path (the one above is the one in my computer). Setting it manually through the menu helps properly selecting the folder you want to be working from: <code>Session/Set working directory/Choose directory...</code> Implementing this operation actually runs the necessary command in the <em>console</em>, so you can actually see the path to your folder or copy and paste it into the script (as it will be type in the script, you won’t need to do this again). I cannot emphasise enough how important this step is, since it indicates R where in our computer we will be working (so it is easy to access the necessary files). In this regard, it is important to have a folder structure (data, results, etc.) that facilitates navigating through your files.</p>
@@ -263,13 +266,13 @@ Figure&nbsp;2: Starting a R script.
 <p>As well as the appropriate software (R and RStudio), this session uses two historical data sets to illustrate the concepts and methods covered here (you should have downloaded them). In order to start exploring this information, we first need to import the data into the R environment.</p>
 <p>As an illustration, let’s focus on the <strong>Paisley dataset</strong>, one of the historical sources we will be exploring here (and part of the course materials). The raw data is stored as an excel spreadsheet named “paisley-data.xlsx” in the folder “data”. The command <code>readxl()</code> imports this excel file into the R environment. Although <code>readxl</code> is contained in the tidyverse package, you still need to open it explicitly using <code>library()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/paisley-data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/paisley-data.xlsx"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Notice that we are instructing R to find the file that is located in a particular folder. We are using a <em>relative path</em> that stems from where your project is saved in (if the data is in the same working directory, you don’t need the path, just the file name).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Notice also the symbol <code>&lt;-</code> (called <em>assignment operator</em>). It serves to create a (temporary) <em>object</em>, named <code>data</code> containing the Paisley data, which is now in the “environment” we are working with. The name of the object is up to you, we call it “data” but it could be anything else with certain restrictions (i.e.&nbsp;not starting with a number). One neat R feature is that you can load many <em>objects</em> simultaneously (with different pieces of information each) and treat them separately depending on your needs (we will see that we can “create” those objects ourselves as results of our analyses).</p>
 <p>Once an object has been created containing the data frame, it is listed in the upper-right window called environment. Typing the name of the object (<code>data</code> in this case) provides a peak at the underlying information. As shown below, the upper left corner indicates that this data frame (referred to as a tibble in the tidyverse terminology) contains 1,000 individuals (rows) and 21 fields (columns). By default, typing the name of the object (<code>data</code>) only provides information on the 10 first cases in order to save memory and space (imagine that your dataset contains 10 million observations!). The number of fields that are displayed depends on how much space is available in the <em>console</em> in the lower part of the interface. You are nonetheless informed about the number of rows and variables that are not visible (as well as the names of those variables). Notice also that, below the variable name, R also indicates the type of variable: some are categorical (“chr” meaning character) and others are numerical (“dbl” meaning double).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,000 × 21
    casen    no month     year forename surname sex     age born  countryb reside
@@ -292,8 +295,8 @@ Figure&nbsp;2: Starting a R script.
 </div>
 <p>If you want to display more cases, you can use the function <code>print(n = 15)</code> and indicate the number of cases to be reported. Let’s pause for a moment to disect what the code below is doing. Notice first that it is crucial to indicate where the information you are asking for is coming from. Remember that we imported the Paisley data into the <em>object</em> name <code>data</code>. The pipe (<code>|&gt;</code>) here basically takes this object and uses it as input in the next line of code, which uses the function <code>print()</code> to request listing the first 15 cases from that object. Alternatively, you can have a look at the last 20 cases by typing <code>tail(20)</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span>  </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span>  </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">15</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,000 × 21
    casen    no month     year forename surname sex     age born  countryb reside
@@ -389,13 +392,14 @@ Figure&nbsp;2: Starting a R script.
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
