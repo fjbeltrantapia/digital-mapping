@@ -295,6 +295,9 @@ div.csl-indent {
 </header>
 
 
+<p>Creating spatial objects (shapefiles) from old maps, aerial pictures or satellite images involves two steps: (1) geo-referencing the image itself, that is, adding real-world spatial coordinates to the image, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile).</p>
+<p>Although this process can be done using R, it is more intuitive using specific GIS software such as <a href="https://qgis.org">QGIS</a> or <a href="https://arcgis.com/index.html">ArcGIS</a>. The <a href="https://programminghistorian.org/en/lessons/vector-layers-qgis">Programming Historian</a> and the <a href="https://geospatialhistorian.wordpress.com">Geospatial Historian</a> offer great tutorials both in QGIS and ArcGIS <span class="citation" data-cites="clifford2013 gregory2007">(<a href="#ref-clifford2013" role="doc-biblioref">Clifford, MacFadyen, and Macfarlane 2013</a>; see also <a href="#ref-gregory2007" role="doc-biblioref">Gregory and Ell 2007</a>)</span>. Manually digitising points, lines or polygons is time-consuming. Recent advances in computational methods enable automatically extracting digital versions from scanned images of historical maps, aerial photos or satellite images. You can find more details in <span class="citation" data-cites="hosseini2021">Hosseini et al. (<a href="#ref-hosseini2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="combes2022">Combes, Gobillon, and Zylberberg (<a href="#ref-combes2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="litvine2024">Litvine et al. (<a href="#ref-litvine2024" role="doc-biblioref">2024</a>)</span>, or <span class="citation" data-cites="mcdonough2024">McDonough (<a href="#ref-mcdonough2024" role="doc-biblioref">2024</a>)</span>.</p>
+<p>Here, we will be using <strong>QGIS</strong>, a geographic information system (GIS) software, which is free and open-source. This type of GIS application consists of a graphical user interface that can be manipulated using menus and toolbars, as well as dragging shape or raster files into the main window. It is therefore a more intuitive way of interacting with spatial object. You can find the instructions to download and install QGIS <a href="https://www.qgis.org">here</a>.</p>
 <p>In this session, we will digitise the buildings contained in this map of Trondheim from 1916 (you have it in the course materials).</p>
 <div class="figure-content">
 <div class="quarto-figure quarto-figure-center">
@@ -303,15 +306,10 @@ div.csl-indent {
 </figure>
 </div>
 </div>
-<p>Digitising old maps (or other types of images) involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile).</p>
-<p>Although this process can be done using R, it is more intuitive using specific GIS software such as <a href="https://qgis.org">QGIS</a> or <a href="https://arcgis.com/index.html">ArcGIS</a>. The <a href="https://programminghistorian.org/en/lessons/vector-layers-qgis">Programming Historian</a> and the <a href="https://geospatialhistorian.wordpress.com">Geospatial Historian</a> offer great tutorials both in QGIS and ArcGIS <span class="citation" data-cites="clifford2013 gregory2007">(<a href="#ref-clifford2013" role="doc-biblioref">Clifford, MacFadyen, and Macfarlane 2013</a>; see also <a href="#ref-gregory2007" role="doc-biblioref">Gregory and Ell 2007</a>)</span>.</p>
-<p>Here, we will be using <strong>QGIS</strong>, a geographic information system (GIS) software, which is free and open-source. This type of GIS application consists of a graphical user interface that can be manipulated using menus and toolbars, as well as dragging shape or raster files into the main window. It is therefore a more intuitive way of interacting with spatial object. You can find the instructions to download and install QGIS <a href="https://www.qgis.org">here</a>.</p>
 <section id="geo-referencing-images" class="level3">
 <h3 class="anchored" data-anchor-id="geo-referencing-images">Geo-referencing images</h3>
-<p>We will do it step by step.</p>
-<ul>
-<li>Import the reference layer that will help us geo-referencing the image. This layer can be an existing shapefile containing some features that are easily recognizable (e.g.&nbsp;rivers, boundaries, etc.) or a general base map. Here, we can use the shapefile “Elv_Hovedelv.shp”, which is part of the course materials, and/or a base map. The latter can be access through the menu <em>Web</em> / <em>QMS</em> / <em>OSM</em> / <em>OSM Standard</em> (you will need to first install the corresponding plugin: <em>Plugins</em> / <em>Manage and Install Plugins</em>).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The figure below shows both in the area around Trondheim: the thick blue line represents the main rivers contained in the shapefile and the rest is the <em>OSM Standard</em> base map.</li>
-</ul>
+<p>The first step involves adding real-world spatial coordinates to the image. We will do it step by step.</p>
+<p>Firstly, import the reference layer that will help us geo-referencing the image. This layer can be an existing shapefile containing some features that are easily recognizable (e.g.&nbsp;rivers, boundaries, etc.) or a general base map. Here, we can use the shapefile “Elv_Hovedelv.shp”, which is part of the course materials, and/or a base map. The latter can be access through the menu <em>Web</em> / <em>QMS</em> / <em>OSM</em> / <em>OSM Standard</em> (you will need to first install the corresponding plugin: <em>Plugins</em> / <em>Manage and Install Plugins</em>).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The figure below shows both in the area around Trondheim: the thick blue line represents the main rivers contained in the shapefile and the rest is the <em>OSM Standard</em> base map.</p>
 <div class="figure-content">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -319,10 +317,7 @@ div.csl-indent {
 </figure>
 </div>
 </div>
-<ul>
-<li><p>Open <em>Georeferencer</em> tool. You can find it in the <em>Layer</em> menu at the top (or in <em>Raster</em> menu in previous QGIS versions).</p></li>
-<li><p>Once the <em>Georeferencer</em> window pops up, you can <em>Open raster</em>, which refers to the scanned image, the old map of Trondheim we are geo-referencing here.</p></li>
-</ul>
+<p>Once you have the reference layers in place, open <em>Georeferencer</em> tool. You can find it in the <em>Layer</em> menu at the top (or in <em>Raster</em> menu in previous QGIS versions). The <em>Georeferencer</em> window will pop up, where you can <em>Open raster</em>: this refers to the scanned image you want to geo-reference, here the old map of Trondheim.</p>
 <div class="figure-content">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -330,9 +325,7 @@ div.csl-indent {
 </figure>
 </div>
 </div>
-<ul>
-<li>The next step involves the actual process of georeferencing, that is, providing real spatial coordinates to a regular image. This involves using the reference layers (e.g.&nbsp;the rivers or the base map) to indicate the GIS software where the image should be placed in space. In practical terms, this implies clicking <em>Find/add Ground Control Points</em> (GCPs), either as coordinates or, more easily, <em>From Map Canvas</em>, that is linking them to landmarks in the reference layer. Notice, that we first click on the scanned map. This opens up a window to <em>Enter Map Coordinates</em> (notice that this might often be hidden). After indicating that you are using the map canvas to provide the spatial coordinates, you do so by clicking in the appropriate location. Do not forget to click “OK”: coordinates will then populate the corresponding. Window.</li>
-</ul>
+<p>The next step involves the actual process of geo-referencing, that is, providing real spatial coordinates to a regular image. This involves using the reference layers (e.g.&nbsp;the rivers or the base map) to provide the GIS software with the spatial coordinates where the image should be placed in space. In practical terms, this implies clicking <em>Find/add Ground Control Points</em> (GCPs), either as coordinates or, more conveniently, <em>From Map Canvas</em>, that is linking them to landmarks in the reference layer. Notice, that we first click on the scanned map. This opens up a window to <em>Enter Map Coordinates</em> (notice that this might often be hidden). After indicating that you are using the map canvas to provide the spatial coordinates, you do so by clicking in the appropriate location. Do not forget to click “OK”: coordinates will then populate the corresponding. Window.</p>
 <div class="figure-content">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -348,9 +341,7 @@ div.csl-indent {
 </figure>
 </div>
 </div>
-<ul>
-<li>Once you have defined the <em>Transformation settings</em> and finished adding CGPs to the scanned map, you can click <em>Start Georeferencing</em>. This will apply the geometric transformation and locate the image into the hypothetic location in real-world coordinates based on the input provided in the previous step. As mentioned above, the output will be a new version of the raw file. You can check whether the georeferencing is actually a good match by comparing it to the reference layers. This is easier if you can set the transparency of the other layers (and/or the order of the layers) to check how the results look like, that is, whether the image overlaps with the layers. Below, you can see the one created for this example, which does a relatively a good job.</li>
-</ul>
+<p>Once you have defined the <em>Transformation settings</em> and finished adding CGPs to the scanned map, you can click <em>Start Georeferencing</em>. This will apply the geometric transformation and locate the image into the hypothetic location in real-world coordinates based on the input provided in the previous step. As mentioned above, the output will be a new version of the raw file. You can check whether the georeferencing is actually a good match by comparing it to the reference layers. This is easier if you can set the transparency of the other layers (and/or the order of the layers) to check how the results look like, that is, whether the image overlaps with the layers. Below, you can see the one created for this example, which does a relatively a good job.</p>
 <div class="figure-content">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -406,8 +397,20 @@ div.csl-indent {
 <div id="ref-clifford2013" class="csl-entry" role="listitem">
 Clifford, Jim, Josh MacFadyen, and Daniel Macfarlane. 2013. <span>“Creating New Vector Layers in QGIS 2.0.”</span> https://doi.org/<a href="https://doi.org/10.46430/phen0034">https://doi.org/10.46430/phen0034</a>.
 </div>
+<div id="ref-combes2022" class="csl-entry" role="listitem">
+Combes, Pierre-Philippe, Laurent Gobillon, and Yanos Zylberberg. 2022. <span>“Urban Economics in a Historical Perspective: Recovering Data with Machine Learning.”</span> <em>Regional Science and Urban Economics</em> 94: 103711.
+</div>
 <div id="ref-gregory2007" class="csl-entry" role="listitem">
 Gregory, Ian N., and Paul S. Ell. 2007. <span>“GIS and Its Role in Historical Research: An Introduction.”</span> In <em>Historical GIS: Technologies, Methodologies, and Scholarship</em>, edited by I. N. Gregory and P. S. Ell. Cambridge University Press.
+</div>
+<div id="ref-hosseini2021" class="csl-entry" role="listitem">
+Hosseini, Kasra, Daniel C. S. Wilson, Kaspar Beelen, and Katherine McDonough. 2021. <span>“MapReader: A Computer Vision Pipeline for the Semantic Exploration of Maps at Scale.”</span> <em>arXiv</em> 2111.15592. <a href="https://doi.org/10.48550/arXiv.2111.15592">https://doi.org/10.48550/arXiv.2111.15592</a>.
+</div>
+<div id="ref-litvine2024" class="csl-entry" role="listitem">
+Litvine, Alexis D., Arthur Starzec, Rehmana Younis, Yannick Faula, Mickaël Coustaty, Leigh Shaw-Taylor, and Véronique Églin. 2024. <span>“Built-up Areas of Nineteenth-Century Britain. An Integrated Methodology for Extracting High-Resolution Urban Footprints from Historical Maps.”</span> <em>Historical Methods: A Journal of Quantitative and Interdisciplinary History</em> 57 (1): 1–19. <a href="https://doi.org/10.1080/01615440.2024.2324163">https://doi.org/10.1080/01615440.2024.2324163</a>.
+</div>
+<div id="ref-mcdonough2024" class="csl-entry" role="listitem">
+McDonough, Katherine. 2024. <span>“Maps as Data.”</span> In <em>Computational Humanities</em>, edited by Lauren Tilton, David Mimno, and Jessica Marie Johnson, 99–126. University of Minnesota Press.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 

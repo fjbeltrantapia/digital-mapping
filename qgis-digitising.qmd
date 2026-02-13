@@ -2,37 +2,35 @@
 title: "Digitising old maps with QGIS"
 ---
 
+Creating spatial objects (shapefiles) from old maps, aerial pictures or satellite images involves two steps: (1) geo-referencing the image itself, that is, adding real-world spatial coordinates to the image, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile). 
+
+Although this process can be done using R, it is more intuitive using specific GIS software such as [QGIS](https://qgis.org) or [ArcGIS](https://arcgis.com/index.html). The [Programming Historian](https://programminghistorian.org/en/lessons/vector-layers-qgis) and the [Geospatial Historian](https://geospatialhistorian.wordpress.com) offer great tutorials both in QGIS and ArcGIS [@clifford2013; see also @gregory2007]. Manually digitising points, lines or polygons is time-consuming. Recent advances in computational methods enable automatically extracting digital versions from scanned images of historical maps, aerial photos or satellite images. You can find more details in @hosseini2021, @combes2022, @litvine2024, or @mcdonough2024.
+
+Here, we will be using **QGIS**, a geographic information system (GIS) software, which is free and open-source. This type of GIS application consists of a graphical user interface that can be manipulated using menus and toolbars, as well as dragging shape or raster files into the main window. It is therefore a more intuitive way of interacting with spatial object. You can find the instructions to download and install QGIS [here](https://www.qgis.org).
+
 In this session, we will digitise the buildings contained in this map of Trondheim from 1916 (you have it in the course materials). 
 
 ::: {.figure-content} 
 ![](images/trd-1916.png){width="100%" height="100%" fig-align="center"}
 :::
 
-Digitising old maps (or other types of images) involves two steps: (1) geo-referencing a historical map, that is, adding real-world spatial coordinates, and (2) digitising the spatial features you are interested in using dots, lines or polygons (creating a shapefile). 
-
-Although this process can be done using R, it is more intuitive using specific GIS software such as [QGIS](https://qgis.org) or [ArcGIS](https://arcgis.com/index.html). The [Programming Historian](https://programminghistorian.org/en/lessons/vector-layers-qgis) and the [Geospatial Historian](https://geospatialhistorian.wordpress.com) offer great tutorials both in QGIS and ArcGIS [@clifford2013; see also @gregory2007].
-
-Here, we will be using **QGIS**, a geographic information system (GIS) software, which is free and open-source. This type of GIS application consists of a graphical user interface that can be manipulated using menus and toolbars, as well as dragging shape or raster files into the main window. It is therefore a more intuitive way of interacting with spatial object. You can find the instructions to download and install QGIS [here](https://www.qgis.org).
-
 ### Geo-referencing images
 
-We will do it step by step.
+The first step involves adding real-world spatial coordinates to the image. We will do it step by step.
 
-- Import the reference layer that will help us geo-referencing the image. This layer can be an existing shapefile containing some features that are easily recognizable (e.g. rivers, boundaries, etc.) or a general base map. Here, we can use the shapefile "Elv_Hovedelv.shp", which is part of the course materials, and/or a base map. The latter can be access through the menu *Web* / *QMS* / *OSM* / *OSM Standard* (you will need to first install the corresponding plugin: *Plugins* / *Manage and Install Plugins*).^[Find and Install the *QuickMapServices*. Once installed, it will be available in the menu *Web* as mentioned in the main text. There are other base maps available that you could use.] The figure below shows both in the area around Trondheim: the thick blue line represents the main rivers contained in the shapefile and the rest is the *OSM Standard* base map. 
+Firstly, import the reference layer that will help us geo-referencing the image. This layer can be an existing shapefile containing some features that are easily recognizable (e.g. rivers, boundaries, etc.) or a general base map. Here, we can use the shapefile "Elv_Hovedelv.shp", which is part of the course materials, and/or a base map. The latter can be access through the menu *Web* / *QMS* / *OSM* / *OSM Standard* (you will need to first install the corresponding plugin: *Plugins* / *Manage and Install Plugins*).^[Find and Install the *QuickMapServices*. Once installed, it will be available in the menu *Web* as mentioned in the main text. There are other base maps available that you could use.] The figure below shows both in the area around Trondheim: the thick blue line represents the main rivers contained in the shapefile and the rest is the *OSM Standard* base map. 
 
 ::: {.figure-content} 
 ![](images/georef/web-osm.png){width="100%" height="100%" fig-align="center"}
 :::
 
-- Open *Georeferencer* tool. You can find it in the *Layer* menu at the top (or in *Raster* menu in previous QGIS versions).
-
-- Once the *Georeferencer* window pops up, you can *Open raster*, which refers to the scanned image, the old map of Trondheim we are geo-referencing here.
+Once you have the reference layers in place, open *Georeferencer* tool. You can find it in the *Layer* menu at the top (or in *Raster* menu in previous QGIS versions). The *Georeferencer* window will pop up, where you can *Open raster*: this refers to the scanned image you want to geo-reference, here the old map of Trondheim.
 
 ::: {.figure-content} 
 ![](images/georef/georef-open-raster.png){width="100%" height="100%" fig-align="center"}
 :::
 
-- The next step involves the actual process of georeferencing, that is, providing real spatial coordinates to a regular image. This involves using the reference layers (e.g. the rivers or the base map) to indicate the GIS software where the image should be placed in space. In practical terms, this implies clicking *Find/add Ground Control Points* (GCPs), either as coordinates or, more easily, *From Map Canvas*, that is linking them to landmarks in the reference layer. Notice, that we first click on the scanned map. This opens up a window to *Enter Map Coordinates* (notice that this might often be hidden). After indicating that you are using the map canvas to provide the spatial coordinates, you do so by clicking in the appropriate location. Do not forget to click "OK": coordinates will then populate the corresponding. Window.
+The next step involves the actual process of geo-referencing, that is, providing real spatial coordinates to a regular image. This involves using the reference layers (e.g. the rivers or the base map) to provide the GIS software with the spatial coordinates where the image should be placed in space. In practical terms, this implies clicking *Find/add Ground Control Points* (GCPs), either as coordinates or, more conveniently, *From Map Canvas*, that is linking them to landmarks in the reference layer. Notice, that we first click on the scanned map. This opens up a window to *Enter Map Coordinates* (notice that this might often be hidden). After indicating that you are using the map canvas to provide the spatial coordinates, you do so by clicking in the appropriate location. Do not forget to click "OK": coordinates will then populate the corresponding. Window.
 
 ::: {.figure-content} 
 ![](images/georef/add-control-points.png){width="100%" height="100%" fig-align="center"}
@@ -44,7 +42,7 @@ Repeat this process at least 3/4 times to better anchor the image where it shoul
 ![](images/georef/transformation-settings.png){width="100%" height="100%" fig-align="center"}
 :::
 
-- Once you have defined the *Transformation settings* and finished adding CGPs to the scanned map, you can click *Start Georeferencing*. This will apply the geometric transformation and locate the image into the hypothetic location in real-world coordinates based on the input provided in the previous step. As mentioned above, the output will be a new version of the raw file. You can check whether the georeferencing is actually a good match by comparing it to the reference layers. This is easier if you can set the transparency of the other layers (and/or the order of the layers) to check how the results look like, that is, whether the image overlaps with the layers. Below, you can see the one created for this example, which does a relatively a good job. 
+Once you have defined the *Transformation settings* and finished adding CGPs to the scanned map, you can click *Start Georeferencing*. This will apply the geometric transformation and locate the image into the hypothetic location in real-world coordinates based on the input provided in the previous step. As mentioned above, the output will be a new version of the raw file. You can check whether the georeferencing is actually a good match by comparing it to the reference layers. This is easier if you can set the transparency of the other layers (and/or the order of the layers) to check how the results look like, that is, whether the image overlaps with the layers. Below, you can see the one created for this example, which does a relatively a good job. 
 
 ::: {.figure-content} 
 ![](images/georef/georef-result.png){width="100%" height="100%" fig-align="center"}
